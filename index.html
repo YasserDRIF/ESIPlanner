@@ -6,24 +6,21 @@
     <link href="styles/kendo.common.min.css" rel="stylesheet">
     <link href="styles/kendo.default.min.css" rel="stylesheet">
     <link href="styles/kendo.Material.min.css" rel="stylesheet">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 
     <script src="js/jquery.min.js"></script>
     <script src="js/kendo.all.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
 
 </head>
 <body>
-<!--
-<div class="box-col">
-    <select id="Group">
-        <option value="group">Groups</option>
-        <option value="prof">Profs</option>
-        <option value="Salle">Salles</option>
-    </select>
-</div>
--->
+
+<style>
+
+</style>
+
 
 <div id="scheduler"></div>
 
@@ -108,6 +105,7 @@
                         {value :4 , text :"2CPI_G8"},
                     ],
                     title: "Groupe",
+                    name :"group"
                 },
                 {
                     field : "prof",
@@ -118,6 +116,8 @@
                         {value :4 , text :"Temeglit"},
                     ],
                     title: "Prefesseur",
+                    name :"prof"
+
                 },
                 {
                     field : "roomId",
@@ -267,14 +267,23 @@
 
         var scheduler = $("#scheduler").data("kendoScheduler");
 
-        $("#Group").kendoDropDownList({
-            value: scheduler.group(),
+        $(".k-scheduler-toolbar .k-scheduler-tools").append('<li class="box-col"> <select id="k-groupeDD"> <option value="None">Grouping: None</option> <option value="Salle">Salle</option> <option value="group">Group</option> <option value="prof">Professeur</option> </select> </li>');
+
+        $("#k-groupeDD").kendoDropDownList({
             change: function() {
-                scheduler.group({ field: this.value() });
+                if (this.value()==="None") {
+                    delete scheduler.options.group;
+
+                }else{
+                    scheduler.options.group = {
+                        resources: [this.value()],
+                        orientation: "vertical",
+                    };
+                }
+                scheduler.view(scheduler.view().name);
 
             }
         });
-
 
         var selectedEvents = [];
         $("#export").click(function() {
@@ -300,17 +309,6 @@
                 scheduler.date(this.value());
             }
         })
-
-
-
-        // Group resources
-        $(".k-scheduler-toolbar ul").append('<li class=""><a role="button" href="#" class="k-button k-groupe"><span class="k-icon fas fa-users "></span>Group Resources</a></li>');
-        $(".k-groupe").click( function()
-            {
-                alert('dd');
-            }
-        );
-
 
 
 
