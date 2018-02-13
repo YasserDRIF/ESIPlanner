@@ -6,6 +6,8 @@
     <link href="styles/kendo.common.min.css" rel="stylesheet">
     <link href="styles/kendo.default.min.css" rel="stylesheet">
     <link href="styles/kendo.Material.min.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
 
     <script src="js/jquery.min.js"></script>
     <script src="js/kendo.all.min.js"></script>
@@ -13,13 +15,51 @@
 
 </head>
 <body>
-<div id="scheduler"></div>
+<!--
+<div class="box-col">
+    <select id="Group">
+        <option value="group">Groups</option>
+        <option value="prof">Profs</option>
+        <option value="Salle">Salles</option>
+    </select>
 </div>
+-->
+
+<div id="scheduler"></div>
+
+
 
 
 <script>
+    // Import DejaVu Sans font for embedding
+    // NOTE: Only required if the Kendo UI stylesheets are loaded
+    // from a different origin, e.g. cdn.kendostatic.com
+    kendo.pdf.defineFont({
+        "DejaVu Sans"             : "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans.ttf",
+        "DejaVu Sans|Bold"        : "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans-Bold.ttf",
+        "DejaVu Sans|Bold|Italic" : "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans-Oblique.ttf",
+        "DejaVu Sans|Italic"      : "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans-Oblique.ttf",
+        "WebComponentsIcons"      : "https://kendo.cdn.telerik.com/2017.1.223/styles/fonts/glyphs/WebComponentsIcons.ttf"
+    });
+</script>
+
+<!-- Load Pako ZLIB library to enable PDF compression -->
+<script src="https://kendo.cdn.telerik.com/2018.1.117/js/pako_deflate.min.js"></script>
+<!-- Export to iCal
+<script src="https://rawgit.com/nwcell/ics.js/master/ics.js"></script>
+<button id="export">Log selected events</div>
+-->
+
+<script>
     $(function() {
+
         $("#scheduler").kendoScheduler({
+            toolbar: [ "pdf" ],
+            pdf: {
+                fileName: "ESIPlanner Calendar Export.pdf",
+                proxyURL: "https://demos.telerik.com/kendo-ui/service/export"
+            },
+            //selectable: true,
             date :new Date ("2018/02/11") ,
             height:642,
             showWorkHours:true,
@@ -41,33 +81,44 @@
                     title:"POO Cour - A1 - Sadeg",
                     start: new Date ("2018/02/11 08:30 AM"),
                     end: new Date ("2018/02/11 10:30 AM"),
-                    attendee:2,
-                    roomId:1
+                    roomId:1,
+                    group:3,
+                    prof:1,
+
                 },
                 {
                     id:2,
                     title:"LOGM TD - S11 - Meziani",
                     start: new Date ("2018/02/11 01:00 PM"),
                     end: new Date ("2018/02/11 03:00 PM"),
-                    attendee:2,
-                    roomId:6
+                    roomId:6,
+                    group:2,
+                    prof:3,
 
                 }
+
             ],
             resources : [
                 {
-                    field : "attendee",
+                    field : "group",
+                    dataSource : [
+                        {value :1 , text :"2CPI_G5"},
+                        {value :2 , text :"2CPI_G6"},
+                        {value :3 , text :"2CPI_G7"},
+                        {value :4 , text :"2CPI_G8"},
+                    ],
+                    title: "Groupe",
+                },
+                {
+                    field : "prof",
                     dataSource : [
                         {value :1 , text :"Sadeg"},
-                        {value :2 , text :"2CPI_G6"},
+                        {value :2 , text :"Bourai"},
                         {value :3 , text :"Meziani"},
-                        {value :4 , text :"2CPI_G6"},
+                        {value :4 , text :"Temeglit"},
                     ],
-                    title: "Attendee",
-
-
+                    title: "Prefesseur",
                 },
-
                 {
                     field : "roomId",
                     dataSource : [
@@ -75,25 +126,27 @@
                         {value :2 , text :"A2"},
                         {value :3 , text :"A3"},
                         {value :4 , text :"A4"},
-                        {value :5 , text :"S1"},
-                        {value :6 , text :"S11"}
-                    ],
-                    title: "Room",
-                    name :"room"
+                        {value :5 , text :"AP1"},
 
-                }
+                    ],
+                    title: "Salle",
+                    name :"Salle"
+
+                },
+
 
             ],
 
 
-            /*group : {
+/*
+            group : {
                 resources: ["Salle"],
                 orientation: "vertical",
-            },*/
-
+            },
+*/
 
             resize: function(e) {
-                if (roomIsOccupied(e.start, e.end, e.event, e.resources) || attendeeIsOccupied(e.start, e.end, e.event, e.resources)) {
+                if (roomIsOccupied(e.start, e.end, e.event, e.resources) || groupIsOccupied(e.start, e.end, e.event, e.resources)) {
                     this.wrapper.find(".k-marquee-color").addClass("invalid-slot");
                     e.preventDefault();
                 }
@@ -104,7 +157,7 @@
                 }
             },
             move: function(e) {
-                if (roomIsOccupied(e.start, e.end, e.event, e.resources) || attendeeIsOccupied(e.start, e.end, e.event, e.resources)) {
+                if (roomIsOccupied(e.start, e.end, e.event, e.resources) || groupIsOccupied(e.start, e.end, e.event, e.resources) || profIsOccupied(e.start, e.end, e.event, e.resources) ) {
                     this.wrapper.find(".k-event-drag-hint").addClass("invalid-slot");
                 }
             },
@@ -112,6 +165,7 @@
                 if (!checkAvailability(e.start, e.end, e.event, e.resources)) {
                     e.preventDefault();
                 }
+
             },
             add: function(e) {
                 if (!checkAvailability(e.event.start, e.event.end, e.event)) {
@@ -155,13 +209,22 @@
             return result;
         }
 
-        function attendeeIsOccupied(start, end, event, resources) {
-            var occurrences = occurrencesInRangeByResource(start, end, "attendee", event, resources);
+        function groupIsOccupied(start, end, event, resources) {
+            var occurrences = occurrencesInRangeByResource(start, end, "group", event, resources);
             if (occurrences.length > 0) {
                 return true;
             }
             return false;
         }
+
+        function profIsOccupied(start, end, event, resources) {
+            var occurrences = occurrencesInRangeByResource(start, end, "prof", event, resources);
+            if (occurrences.length > 0) {
+                return true;
+            }
+            return false;
+        }
+
 
         function roomIsOccupied(start, end, event, resources) {
             var occurrences = occurrencesInRangeByResource(start, end, "roomId", event, resources);
@@ -173,9 +236,17 @@
 
         function checkAvailability(start, end, event, resources) {
 
-            if (attendeeIsOccupied(start, end, event, resources)) {
+            if (groupIsOccupied(start, end, event, resources)) {
                 setTimeout(function() {
-                    alert("This person is not available in this time period.");
+                    alert("This group is not available in this time period.");
+                }, 0);
+
+                return false;
+            }
+
+            if (profIsOccupied(start, end, event, resources)) {
+                setTimeout(function() {
+                    alert("This Professor is not available in this time period.");
                 }, 0);
 
                 return false;
@@ -193,7 +264,61 @@
         }
 
 
+
+        var scheduler = $("#scheduler").data("kendoScheduler");
+
+        $("#Group").kendoDropDownList({
+            value: scheduler.group(),
+            change: function() {
+                scheduler.group({ field: this.value() });
+
+            }
+        });
+
+
+        var selectedEvents = [];
+        $("#export").click(function() {
+            var cal = ics();
+            var event;
+
+            for (var idx = 0, length = selectedEvents.length; idx < length; idx++) {
+                event = selectedEvents[idx];
+                cal.addEvent(event.title, event.description, "", event.start, event.end);
+            }
+
+            var icalEvents = cal.events();
+
+            console.log(icalEvents);
+        });
+
+
+        scheduler.wrapper.find(".k-nav-current").hide();
+
+        $("#calendar").kendoCalendar({
+            value: scheduler.date(),
+            change: function() {
+                scheduler.date(this.value());
+            }
+        })
+
+
+
+        // Group resources
+        $(".k-scheduler-toolbar ul").append('<li class=""><a role="button" href="#" class="k-button k-groupe"><span class="k-icon fas fa-users "></span>Group Resources</a></li>');
+        $(".k-groupe").click( function()
+            {
+                alert('dd');
+            }
+        );
+
+
+
+
+
     });
+
+
+
 
 </script>
 
@@ -202,6 +327,11 @@
         background: red !important;
         cursor: no-drop;
     }
+    html
+    {
+        font: 12px sans-serif;
+    }
+
 </style>
 
 
