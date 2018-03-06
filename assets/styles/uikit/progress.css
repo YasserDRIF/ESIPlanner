@@ -1,0 +1,33 @@
+/* BEGIN UIKIT PROGRESS */
+.progress {
+  width: 100%;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  height: 16px;
+  background-color: rgba(57, 81, 155, 0.1);
+  font-size: 12px; }
+  .progress.ks-rounded {
+    -webkit-border-radius: 12px;
+            border-radius: 12px; }
+  .progress.ks-progress-sm {
+    height: 10px; }
+  .progress.ks-progress-xs {
+    height: 6px; }
+  .progress > .progress-bar {
+    background-color: #25628F; }
+
+.ks-progress.ks-progress-inline {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .ks-progress.ks-progress-inline > .ks-amount {
+    margin-left: 10px;
+    font-size: 12px; }
+
+/* END UIKIT PROGRESS */

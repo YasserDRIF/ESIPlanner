@@ -1,0 +1,134 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Container / .ks-projects-dashboard-page
+2. Project header / .ks-projects-dashboard-page > .ks-header
+3. Tasks project logo / .ks-projects-dashboard-page > .ks-header > .ks-project > .ks-logo
+4. Search and Users list / .ks-projects-dashboard-page > .ks-header > .ks-extras
+5. Widgets container / .ks-projects-dashboard-page > .ks-body
+-------------------------------------------------------------------*/
+.ks-projects-dashboard-page {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%; }
+  .ks-projects-dashboard-page > .ks-header {
+    background: #fff;
+    min-height: 60px;
+    height: 60px;
+    border-bottom: 1px solid #dee0e1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 30px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .ks-projects-dashboard-page > .ks-header > .ks-project {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      -js-display: flex;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .ks-projects-dashboard-page > .ks-header > .ks-project > .ks-logo {
+        width: 36px;
+        height: 36px;
+        background-color: #ffffff;
+        border: solid 1px #dee0e1;
+        -webkit-border-radius: 50%;
+                border-radius: 50%;
+        margin-right: 15px; }
+      .ks-projects-dashboard-page > .ks-header > .ks-project > .ks-name {
+        font-size: 18px; }
+    .ks-projects-dashboard-page > .ks-header > .ks-extras {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      -js-display: flex;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .ks-projects-dashboard-page > .ks-header > .ks-extras > .ks-search {
+        width: 318px; }
+      .ks-projects-dashboard-page > .ks-header > .ks-extras > .ks-users {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        -js-display: flex;
+        display: flex;
+        margin-left: 40px; }
+        .ks-projects-dashboard-page > .ks-header > .ks-extras > .ks-users > a {
+          margin-right: 10px;
+          width: 26px;
+          height: 26px; }
+          .ks-projects-dashboard-page > .ks-header > .ks-extras > .ks-users > a.ks-add {
+            -webkit-border-radius: 50%;
+                    border-radius: 50%;
+            color: #25628F;
+            display: -webkit-inline-box;
+            display: -webkit-inline-flex;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            line-height: 14px;
+            background-color: #fff;
+            font-size: 19px;
+            border: solid 1px rgba(57, 81, 155, 0.3); }
+            .ks-projects-dashboard-page > .ks-header > .ks-extras > .ks-users > a.ks-add:hover {
+              border: 1px solid #25628F; }
+          .ks-projects-dashboard-page > .ks-header > .ks-extras > .ks-users > a:last-child {
+            margin-right: 0; }
+  .ks-projects-dashboard-page > .ks-body {
+    padding: 30px 20px; }
+
+@media screen and (max-width: 780px) {
+  .ks-projects-dashboard-page > .ks-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    padding: 20px 30px; }
+    .ks-projects-dashboard-page > .ks-header > .ks-project {
+      margin-bottom: 15px; } }
+
+@media screen and (max-width: 570px) {
+  .ks-projects-dashboard-page > .ks-header > .ks-extras {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .ks-projects-dashboard-page > .ks-header > .ks-extras > .ks-search {
+      margin-bottom: 15px; }
+    .ks-projects-dashboard-page > .ks-header > .ks-extras > .ks-users {
+      margin-left: 0; } }

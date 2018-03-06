@@ -1,0 +1,226 @@
+.ks-music-app {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  height: 100%;
+  position: relative; }
+  .ks-music-app .ks-music-app-content {
+    background: #fff;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .ks-music-app .ks-music-app-content .ks-music-app-content-cover {
+      min-height: 170px;
+      background-color: #263155;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      -js-display: flex;
+      display: flex;
+      padding: 30px;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      /*background: url("../../img/blur-image.jpg") top center no-repeat;
+      background-size: cover;*/ }
+      .ks-music-app .ks-music-app-content .ks-music-app-content-cover .ks-music-cover-image {
+        width: 110px;
+        height: 110px;
+        margin-right: 20px; }
+      .ks-music-app .ks-music-app-content .ks-music-app-content-cover .ks-music-cover-info .ks-music-cover-info-header {
+        color: #fff;
+        margin: 0; }
+      .ks-music-app .ks-music-app-content .ks-music-app-content-cover .ks-music-cover-info .ks-music-album-info {
+        margin: 14px 0;
+        padding: 0; }
+        .ks-music-app .ks-music-app-content .ks-music-app-content-cover .ks-music-cover-info .ks-music-album-info > li {
+          font-size: 12px;
+          font-weight: 500;
+          display: inline-block;
+          color: #fff; }
+          .ks-music-app .ks-music-app-content .ks-music-app-content-cover .ks-music-cover-info .ks-music-album-info > li + li {
+            margin-left: 15px; }
+            .ks-music-app .ks-music-app-content .ks-music-app-content-cover .ks-music-cover-info .ks-music-album-info > li + li::before {
+              content: "";
+              background: #fff;
+              width: 5px;
+              height: 5px;
+              -webkit-border-radius: 8px;
+                      border-radius: 8px;
+              margin-right: 15px;
+              display: inline-block;
+              position: relative;
+              top: -2px; }
+      .ks-music-app .ks-music-app-content .ks-music-app-content-cover .ks-music-cover-info .ks-music-cover-mobile-controls {
+        display: none; }
+      .ks-music-app .ks-music-app-content .ks-music-app-content-cover .ks-music-cover-info .ks-music-cover-controls .btn + .btn, .ks-music-app .ks-music-app-content .ks-music-app-content-cover .ks-music-cover-info .ks-music-cover-mobile-controls .btn + .btn {
+        margin-left: 10px; }
+    .ks-music-app .ks-music-app-content .ks-music-app-content-songs {
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1; }
+      .ks-music-app .ks-music-app-content .ks-music-app-content-songs .table {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: none; }
+        .ks-music-app .ks-music-app-content .ks-music-app-content-songs .table th, .ks-music-app .ks-music-app-content .ks-music-app-content-songs .table td {
+          border: none; }
+        .ks-music-app .ks-music-app-content .ks-music-app-content-songs .table th {
+          color: rgba(51, 51, 51, 0.6);
+          font-weight: normal; }
+        .ks-music-app .ks-music-app-content .ks-music-app-content-songs .table .ks-album-song-number, .ks-music-app .ks-music-app-content .ks-music-app-content-songs .table .ks-album-song-duration {
+          width: 1px;
+          color: rgba(51, 51, 51, 0.6); }
+  .ks-music-app .ks-music-app-player {
+    display: none; }
+  .ks-music-app.ks-player-active .ks-music-app-content .ks-music-app-content-songs .table {
+    margin-bottom: 75px; }
+  .ks-music-app.ks-player-active .ks-music-app-player {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    height: 75px;
+    background: #fff;
+    right: 0;
+    left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .ks-music-app.ks-player-active .ks-music-app-player-progress {
+    position: relative;
+    -webkit-border-radius: 0;
+            border-radius: 0;
+    margin: 0; }
+  .ks-music-app.ks-player-active .ks-music-app-player-progress-elapsed-time {
+    position: absolute;
+    left: 7px;
+    line-height: 17px;
+    font-size: 10px;
+    font-weight: 500;
+    color: #fff; }
+  .ks-music-app.ks-player-active .ks-music-app-player-progress-duration {
+    position: absolute;
+    right: 7px;
+    line-height: 17px;
+    font-size: 10px;
+    font-weight: 500; }
+  .ks-music-app.ks-player-active .ks-music-app-player-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 12px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+    .ks-music-app.ks-player-active .ks-music-app-player-wrapper .ks-music-app-player-song-info {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      -js-display: flex;
+      display: flex; }
+      .ks-music-app.ks-player-active .ks-music-app-player-wrapper .ks-music-app-player-song-info .ks-music-app-player-info-header {
+        margin-bottom: 2px; }
+      .ks-music-app.ks-player-active .ks-music-app-player-wrapper .ks-music-app-player-song-info .ks-music-app-player-album-image {
+        width: 36px;
+        height: 36px;
+        margin-right: 10px; }
+      .ks-music-app.ks-player-active .ks-music-app-player-wrapper .ks-music-app-player-song-info .ks-music-app-player-info-song-name {
+        font-weight: 500;
+        font-size: 12px; }
+      .ks-music-app.ks-player-active .ks-music-app-player-wrapper .ks-music-app-player-song-info .ks-music-app-player-info-album-name {
+        font-size: 12px;
+        color: rgba(51, 51, 51, 0.6);
+        margin-left: 7px;
+        display: inline-block; }
+      .ks-music-app.ks-player-active .ks-music-app-player-wrapper .ks-music-app-player-song-info .ks-music-app-player-info-artist {
+        font-size: 12px; }
+    .ks-music-app.ks-player-active .ks-music-app-player-wrapper .ks-music-app-player-song-controls .ks-music-app-player-song-control {
+      display: inline-block;
+      font-size: 24px;
+      cursor: pointer; }
+      .ks-music-app.ks-player-active .ks-music-app-player-wrapper .ks-music-app-player-song-controls .ks-music-app-player-song-control + .ks-music-app-player-song-control {
+        margin-left: 10px; }
+    .ks-music-app.ks-player-active .ks-music-app-player-wrapper .ks-music-app-player-song-extra-controls {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      -js-display: flex;
+      display: flex; }
+      .ks-music-app.ks-player-active .ks-music-app-player-wrapper .ks-music-app-player-song-extra-controls .ks-music-app-player-song-extra-control {
+        display: inline-block;
+        font-size: 24px;
+        cursor: pointer;
+        margin-left: 10px; }
+    .ks-music-app.ks-player-active .ks-music-app-player-wrapper .ks-music-app-player-song-extra-control-volume {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      -js-display: flex;
+      display: flex; }
+      .ks-music-app.ks-player-active .ks-music-app-player-wrapper .ks-music-app-player-song-extra-control-volume .ks-music-app-volume-control {
+        width: 100px;
+        margin-left: 10px; }
+
+@media screen and (max-width: 780px) {
+  .btn.ks-music-app-navigation-block-toggle {
+    position: static; }
+  .ks-music-app > .ks-music-app-content {
+    width: 100%; }
+  .ks-music-app > .ks-navigation {
+    position: fixed;
+    z-index: 2;
+    height: 100%;
+    top: 120px;
+    width: 250px;
+    visibility: hidden;
+    left: -250px; }
+    .ks-music-app > .ks-navigation.ks-open {
+      visibility: visible;
+      left: 0;
+      -webkit-transition: left .2s ease;
+      transition: left .2s ease; }
+  .ks-music-app .ks-music-app-player .ks-music-app-player-wrapper .ks-music-app-player-song-info {
+    display: none; } }
+
+@media screen and (max-width: 510px) {
+  .ks-music-app .ks-music-app-content .ks-music-app-content-cover {
+    padding: 10px;
+    min-height: 150px; }
+    .ks-music-app .ks-music-app-content .ks-music-app-content-cover .ks-music-cover-controls {
+      display: none; }
+    .ks-music-app .ks-music-app-content .ks-music-app-content-cover .ks-music-cover-info-header {
+      font-size: 20px; }
+    .ks-music-app .ks-music-app-content .ks-music-app-content-cover .ks-music-cover-info .ks-music-cover-mobile-controls {
+      display: block; } }

@@ -1,0 +1,74 @@
+.ks-radial-progress-chart .ks-amount.ks-invisible {
+  display: none; }
+
+.ks-radial-progress-chart.ks-white .ks-background {
+  fill: rgba(255, 255, 255, 0.2); }
+
+.ks-radial-progress-chart.ks-white .ks-progress-line {
+  fill: #fff; }
+
+.ks-radial-progress-chart.ks-white .ks-amount {
+  font-size: 30px;
+  fill: #333;
+  text-anchor: middle; }
+
+.ks-radial-progress-chart.ks-white .ks-description {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 500;
+  text-anchor: middle;
+  fill: #858585; }
+
+.ks-radial-progress-chart.ks-primary .ks-background {
+  fill: rgba(57, 80, 155, 0.1); }
+
+.ks-radial-progress-chart.ks-primary .ks-progress-line {
+  fill: #25628F; }
+
+.ks-radial-progress-chart.ks-primary .ks-amount {
+  font-size: 30px;
+  fill: #333;
+  text-anchor: middle; }
+
+.ks-radial-progress-chart.ks-primary .ks-description {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 500;
+  text-anchor: middle;
+  fill: #858585; }
+
+.ks-radial-progress-chart.ks-purple .ks-background {
+  fill: #e392e3; }
+
+.ks-radial-progress-chart.ks-purple .ks-progress-line {
+  fill: #d149d0; }
+
+.ks-radial-progress-chart.ks-purple .ks-amount {
+  font-size: 30px;
+  fill: #333;
+  text-anchor: middle; }
+
+.ks-radial-progress-chart.ks-purple .ks-description {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 500;
+  text-anchor: middle;
+  fill: #858585; }
+
+.ks-radial-progress-chart.ks-success .ks-background {
+  fill: #82e0aa; }
+
+.ks-radial-progress-chart.ks-success .ks-progress-line {
+  fill: #4caf50; }
+
+.ks-radial-progress-chart.ks-success .ks-amount {
+  font-size: 30px;
+  fill: #333;
+  text-anchor: middle; }
+
+.ks-radial-progress-chart.ks-success .ks-description {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 500;
+  text-anchor: middle;
+  fill: #858585; }

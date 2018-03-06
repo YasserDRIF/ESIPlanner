@@ -1,0 +1,83 @@
+.dm-roles-permissions-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex; }
+
+.ks-roles-permissions-block-header {
+  min-height: 40px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  padding: 12px 20px;
+  font-size: 12px;
+  font-weight: 500;
+  border-bottom: 1px solid #dee0e1; }
+
+.ks-roles-permissions-modules .ks-checkbox-switch {
+  margin: 0; }
+
+.ks-roles-permissions-modules .nav {
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+  -webkit-flex-direction: column !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important; }
+
+.ks-roles-permissions-modules .nav-link {
+  padding: 8px 35px 8px 20px !important; }
+
+.ks-roles-permissions-modules .dropdown-item {
+  padding-left: 30px !important;
+  padding-right: 35px !important; }
+
+.dm-permissions-list {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1 1 0%;
+  background: #fff;
+  overflow-x: scroll; }
+
+.dm-permissions-list-table th {
+  border-top: 1px solid transparent;
+  text-align: center; }
+
+.dm-permissions-list-table tbody {
+  padding-top: 22px; }
+
+.dm-permissions-list-table td {
+  vertical-align: middle;
+  border-top: none;
+  text-align: center; }
+  .dm-permissions-list-table td:first-child {
+    text-align: left; }
+
+.dm-permissions-list-table .custom-control {
+  position: relative;
+  top: 3px;
+  z-index: 1; }
+
+@media screen and (max-width: 980px) {
+  .dm-roles-permissions-wrap .dm-permissions-list {
+    width: 100%;
+    position: fixed;
+    margin-left: -981px; }
+  .dm-roles-permissions-wrap .ks-navigation {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1 1 0%; } }
+
+@media screen and (max-width: 500px) {
+  .dm-roles-permissions-wrap .ks-roles-permissions-modules {
+    width: 100%;
+    position: fixed;
+    margin-left: -501px; } }

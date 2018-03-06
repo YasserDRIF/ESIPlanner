@@ -1,0 +1,23 @@
+.trumbowyg-box {
+  margin: 0;
+  border-color: #dee0e1; }
+
+.trumbowyg-button-pane {
+  background: #f7f7f7;
+  border-bottom-color: #dee0e1; }
+
+.trumbowyg-modal-box .trumbowyg-modal-button {
+  -webkit-border-radius: 2px !important;
+          border-radius: 2px !important; }
+  .trumbowyg-modal-box .trumbowyg-modal-button.trumbowyg-modal-submit {
+    background: #4caf50; }
+    .trumbowyg-modal-box .trumbowyg-modal-button.trumbowyg-modal-submit:focus {
+      background: #4caf50; }
+    .trumbowyg-modal-box .trumbowyg-modal-button.trumbowyg-modal-submit:hover {
+      background: #43a047; }
+  .trumbowyg-modal-box .trumbowyg-modal-button.trumbowyg-modal-reset {
+    background: #ebebeb; }
+    .trumbowyg-modal-box .trumbowyg-modal-button.trumbowyg-modal-reset:focus {
+      background: #ebebeb; }
+    .trumbowyg-modal-box .trumbowyg-modal-button.trumbowyg-modal-reset:hover {
+      background: #e1e1e1; }

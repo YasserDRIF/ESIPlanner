@@ -1,0 +1,44 @@
+.bootstrap-touchspin .btn.btn-default {
+  background: #ebeef5;
+  color: #25628F;
+  border: 1px solid #c4cbe1; }
+
+.bootstrap-touchspin .bootstrap-touchspin-postfix.btn-default {
+  border-left: none; }
+
+.bootstrap-touchspin .input-group-addon {
+  border-left: none;
+  border-right: none; }
+
+.bootstrap-touchspin.input-group input.form-control.touchspin-default {
+  -webkit-border-top-left-radius: 2px;
+          border-top-left-radius: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+          border-bottom-left-radius: 2px; }
+
+.bootstrap-touchspin .input-group-btn .bootstrap-touchspin-up, .bootstrap-touchspin .input-group-btn .bootstrap-touchspin-down {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.bootstrap-touchspin .input-group-btn-vertical {
+  width: 20px; }
+  .bootstrap-touchspin .input-group-btn-vertical > .btn i {
+    position: static;
+    display: block; }
+  .bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-up {
+    height: 20px;
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 12px;
+    -webkit-border-top-right-radius: 2px;
+            border-top-right-radius: 2px; }
+    .bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-up > .fa:before {
+      position: relative;
+      top: -1px; }
+  .bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-down {
+    padding: 0;
+    -webkit-border-bottom-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+    height: 20px;
+    padding-left: 5px;
+    padding-right: 12px; }

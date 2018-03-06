@@ -1,0 +1,22 @@
+.ks-simplemde-markdown .editor-toolbar {
+  opacity: 1;
+  -webkit-border-top-left-radius: 2px;
+          border-top-left-radius: 2px;
+  -webkit-border-top-right-radius: 2px;
+          border-top-right-radius: 2px;
+  border-color: rgba(0, 0, 0, 0.15); }
+  .ks-simplemde-markdown .editor-toolbar:hover {
+    opacity: 1; }
+  .ks-simplemde-markdown .editor-toolbar a {
+    font-size: 18px; }
+    .ks-simplemde-markdown .editor-toolbar a.active, .ks-simplemde-markdown .editor-toolbar a:hover {
+      -webkit-border-radius: 2px;
+              border-radius: 2px;
+      border-color: rgba(0, 0, 0, 0.15); }
+
+.ks-simplemde-markdown .CodeMirror {
+  border-color: rgba(0, 0, 0, 0.15);
+  -webkit-border-bottom-left-radius: 2px;
+          border-bottom-left-radius: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+          border-bottom-right-radius: 2px; }

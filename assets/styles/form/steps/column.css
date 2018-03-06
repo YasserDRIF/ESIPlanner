@@ -1,0 +1,196 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Container / .ks-form-steps-column-page
+2. Steps indicator / .ks-form-steps-column-page > .ks-steps
+3. Step content / .ks-form-steps-column-page > .ks-wrapper > .ks-step-content
+-------------------------------------------------------------------*/
+.ks-form-steps-column-page {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  height: 100%;
+  background: #fff; }
+  .ks-form-steps-column-page .ks-form-column-steps {
+    width: 294px;
+    border-right: 1px solid rgba(57, 80, 155, 0.2);
+    padding: 30px;
+    background: #fff; }
+    .ks-form-steps-column-page .ks-form-column-steps .ks-form-column-steps-header {
+      font-size: 24px;
+      line-height: 24px;
+      margin-top: 0;
+      font-weight: normal;
+      margin-bottom: 10px; }
+    .ks-form-steps-column-page .ks-form-column-steps .ks-form-column-steps-description {
+      font-size: 12px;
+      color: #858585; }
+    .ks-form-steps-column-page .ks-form-column-steps .ks-form-column-steps-items {
+      margin-top: 30px;
+      border-left: 1px solid rgba(51, 51, 51, 0.1);
+      margin-left: 19px; }
+      .ks-form-steps-column-page .ks-form-column-steps .ks-form-column-steps-items .ks-form-column-steps-item {
+        margin-left: -19px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        -js-display: flex;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        font-size: 14px;
+        line-height: 14px;
+        color: rgba(51, 51, 51, 0.3);
+        margin-bottom: 20px; }
+        .ks-form-steps-column-page .ks-form-column-steps .ks-form-column-steps-items .ks-form-column-steps-item:last-child {
+          margin-bottom: 0; }
+        .ks-form-steps-column-page .ks-form-column-steps .ks-form-column-steps-items .ks-form-column-steps-item .ks-point {
+          width: 36px;
+          height: 36px;
+          font-size: 12px;
+          line-height: 11px;
+          background-color: #ffffff;
+          border: solid 1px rgba(51, 51, 51, 0.2);
+          -webkit-border-radius: 50%;
+                  border-radius: 50%;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          -js-display: flex;
+          display: flex;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          margin-right: 15px; }
+        .ks-form-steps-column-page .ks-form-column-steps .ks-form-column-steps-items .ks-form-column-steps-item.ks-completed {
+          color: #4caf50;
+          font-weight: 500; }
+          .ks-form-steps-column-page .ks-form-column-steps .ks-form-column-steps-items .ks-form-column-steps-item.ks-completed .ks-point {
+            background: #4caf50;
+            border: none; }
+            .ks-form-steps-column-page .ks-form-column-steps .ks-form-column-steps-items .ks-form-column-steps-item.ks-completed .ks-point span {
+              display: none; }
+            .ks-form-steps-column-page .ks-form-column-steps .ks-form-column-steps-items .ks-form-column-steps-item.ks-completed .ks-point:before {
+              content: "\f17b";
+              font-family: "LineAwesome";
+              color: #fff;
+              font-size: 16px;
+              position: relative;
+              top: 1px; }
+        .ks-form-steps-column-page .ks-form-column-steps .ks-form-column-steps-items .ks-form-column-steps-item.ks-current {
+          color: #25628F;
+          font-weight: 500; }
+          .ks-form-steps-column-page .ks-form-column-steps .ks-form-column-steps-items .ks-form-column-steps-item.ks-current .ks-point {
+            border: solid 1px #25628F; }
+        .ks-form-steps-column-page .ks-form-column-steps .ks-form-column-steps-items .ks-form-column-steps-item.ks-invalid {
+          color: #ef5350; }
+          .ks-form-steps-column-page .ks-form-column-steps .ks-form-column-steps-items .ks-form-column-steps-item.ks-invalid .ks-point {
+            border: solid 1px #ef5350; }
+  .ks-form-steps-column-page .ks-form-column-steps-wrapper {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .ks-form-steps-column-page .ks-form-column-steps-wrapper .ks-form-column-steps-content {
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      -js-display: flex;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .ks-form-steps-column-page .ks-form-column-steps-wrapper .ks-form-column-steps-content .ks-form-column-steps-description {
+        padding: 30px;
+        border-bottom: 1px solid rgba(57, 80, 155, 0.2);
+        min-height: 113px; }
+        .ks-form-steps-column-page .ks-form-column-steps-wrapper .ks-form-column-steps-content .ks-form-column-steps-description .ks-form-column-steps-content-header {
+          font-size: 24px;
+          line-height: 24px;
+          margin-top: 0;
+          font-weight: normal;
+          margin-bottom: 10px; }
+        .ks-form-steps-column-page .ks-form-column-steps-wrapper .ks-form-column-steps-content .ks-form-column-steps-description .ks-form-column-steps-content-text {
+          font-size: 12px;
+          color: #858585; }
+      .ks-form-steps-column-page .ks-form-column-steps-wrapper .ks-form-column-steps-content .ks-form-column-steps-body {
+        height: 1px;
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1; }
+        .ks-form-steps-column-page .ks-form-column-steps-wrapper .ks-form-column-steps-content .ks-form-column-steps-body .ks-form {
+          padding: 30px; }
+          .ks-form-steps-column-page .ks-form-column-steps-wrapper .ks-form-column-steps-content .ks-form-column-steps-body .ks-form .ks-separator {
+            height: 1px;
+            background-color: rgba(57, 80, 155, 0.2);
+            margin-left: -30px;
+            margin-right: -30px;
+            margin-top: 30px;
+            margin-bottom: 30px; }
+    .ks-form-steps-column-page .ks-form-column-steps-wrapper .ks-form-column-steps-controls {
+      padding: 30px; }
+      .ks-form-steps-column-page .ks-form-column-steps-wrapper .ks-form-column-steps-controls .ks-previous {
+        margin-right: 10px; }
+      .ks-form-steps-column-page .ks-form-column-steps-wrapper .ks-form-column-steps-controls.ks-space-between {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        -js-display: flex;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+      .ks-form-steps-column-page .ks-form-column-steps-wrapper .ks-form-column-steps-controls.ks-flex-end {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        -js-display: flex;
+        display: flex;
+        -webkit-box-pack: end;
+        -webkit-justify-content: flex-end;
+            -ms-flex-pack: end;
+                justify-content: flex-end; }
+
+@media screen and (max-width: 780px) {
+  .btn.ks-form-steps-column-steps-block-toggle {
+    position: static; }
+  .ks-form-steps-column-page .ks-form-column-steps {
+    position: fixed;
+    z-index: 2;
+    height: -webkit-calc(100% - 120px);
+    height: calc(100% - 120px);
+    top: 120px;
+    visibility: hidden;
+    left: -296px; }
+    .ks-form-steps-column-page .ks-form-column-steps.ks-open {
+      visibility: visible;
+      left: 0;
+      -webkit-transition: left .2s ease;
+      transition: left .2s ease; } }

@@ -1,0 +1,504 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Container / .ks-filemanager-page
+2. Navigation / .ks-filemanager-page > .ks-navigation
+3. Files list / .ks-filemanager-page > .ks-files
+4. File info sidebar / .ks-filemanager-page > .ks-info
+-------------------------------------------------------------------*/
+.ks-filemanager-page {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100%; }
+  .ks-filemanager-page > .ks-navigation {
+    width: 259px;
+    min-width: 259px;
+    border-right: 1px solid #dee0e1;
+    background: #fff; }
+    .ks-filemanager-page > .ks-navigation .ks-wrapper {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      -js-display: flex;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      height: 100%; }
+      .ks-filemanager-page > .ks-navigation .ks-wrapper > .ks-separator {
+        font-size: 11px;
+        color: #858585;
+        margin: 25px 30px;
+        text-transform: uppercase; }
+      .ks-filemanager-page > .ks-navigation .ks-wrapper > .ks-tree {
+        list-style: none;
+        margin: 0;
+        padding: 0; }
+        .ks-filemanager-page > .ks-navigation .ks-wrapper > .ks-tree ul {
+          list-style: none;
+          margin: 0;
+          padding: 0; }
+        .ks-filemanager-page > .ks-navigation .ks-wrapper > .ks-tree li > a {
+          display: block;
+          padding: 11px 30px;
+          font-size: 13px;
+          color: #333;
+          position: relative; }
+          .ks-filemanager-page > .ks-navigation .ks-wrapper > .ks-tree li > a:hover {
+            text-decoration: none;
+            background-color: #f3f5f9; }
+        .ks-filemanager-page > .ks-navigation .ks-wrapper > .ks-tree li.ks-active {
+          background: #ebeef5;
+          color: #333;
+          position: relative; }
+          .ks-filemanager-page > .ks-navigation .ks-wrapper > .ks-tree li.ks-active::before {
+            content: '';
+            width: 4px;
+            height: 100%;
+            background: #d7dceb;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0; }
+        .ks-filemanager-page > .ks-navigation .ks-wrapper > .ks-tree li.ks-item > a::before {
+          content: "\f1fe";
+          font-family: "LineAwesome";
+          font-size: 20px;
+          color: #25628F;
+          display: inline-block;
+          margin-right: 14px;
+          position: relative;
+          top: 2px; }
+        .ks-filemanager-page > .ks-navigation .ks-wrapper > .ks-tree li.ks-item.ks-has-submenu > a::before {
+          content: "\f1fe"; }
+        .ks-filemanager-page > .ks-navigation .ks-wrapper > .ks-tree li.ks-has-submenu > a::after {
+          content: "\f110";
+          border: none;
+          font-family: "LineAwesome";
+          width: auto;
+          height: auto;
+          float: right;
+          display: block;
+          padding: 0;
+          margin-right: 0;
+          font-size: 13px;
+          font-weight: normal;
+          line-height: 30px;
+          color: #9da9cd; }
+        .ks-filemanager-page > .ks-navigation .ks-wrapper > .ks-tree li.ks-has-submenu .ks-submenu {
+          display: none; }
+          .ks-filemanager-page > .ks-navigation .ks-wrapper > .ks-tree li.ks-has-submenu .ks-submenu a {
+            padding-left: 40px; }
+          .ks-filemanager-page > .ks-navigation .ks-wrapper > .ks-tree li.ks-has-submenu .ks-submenu .ks-submenu a {
+            padding-left: 50px; }
+          .ks-filemanager-page > .ks-navigation .ks-wrapper > .ks-tree li.ks-has-submenu .ks-submenu .ks-submenu .ks-submenu a {
+            padding-left: 60px; }
+          .ks-filemanager-page > .ks-navigation .ks-wrapper > .ks-tree li.ks-has-submenu .ks-submenu .ks-submenu .ks-submenu .ks-submenu a {
+            padding-left: 70px; }
+        .ks-filemanager-page > .ks-navigation .ks-wrapper > .ks-tree li.ks-has-submenu.ks-open.ks-has-submenu > .ks-submenu {
+          display: block; }
+        .ks-filemanager-page > .ks-navigation .ks-wrapper > .ks-tree li.ks-has-submenu.ks-open.ks-item > a::before {
+          content: "\f200"; }
+        .ks-filemanager-page > .ks-navigation .ks-wrapper > .ks-tree li.ks-has-submenu.ks-active a {
+          background-color: #f3f5f9; }
+      .ks-filemanager-page > .ks-navigation .ks-wrapper > .ks-menu {
+        list-style: none;
+        padding: 0; }
+        .ks-filemanager-page > .ks-navigation .ks-wrapper > .ks-menu li:last-child {
+          margin-bottom: 0; }
+        .ks-filemanager-page > .ks-navigation .ks-wrapper > .ks-menu li > a {
+          display: block;
+          padding: 11px 30px;
+          font-size: 13px;
+          color: #333;
+          position: relative; }
+          .ks-filemanager-page > .ks-navigation .ks-wrapper > .ks-menu li > a > .ks-icon {
+            width: 20px;
+            font-size: 20px;
+            color: #25628F;
+            display: inline-block;
+            margin-right: 12px;
+            position: relative;
+            top: 2px; }
+        .ks-filemanager-page > .ks-navigation .ks-wrapper > .ks-menu li.ks-active {
+          background: #ebeef5;
+          color: #333333;
+          position: relative; }
+          .ks-filemanager-page > .ks-navigation .ks-wrapper > .ks-menu li.ks-active::before {
+            content: '';
+            width: 4px;
+            height: 100%;
+            background: #d7dceb;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0; }
+  .ks-filemanager-page > .ks-files {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+    .ks-filemanager-page > .ks-files > .ks-header {
+      background: #fff;
+      padding: 12px 20px;
+      border-bottom: 1px solid #dee0e1;
+      height: 59px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      -js-display: flex;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .ks-filemanager-page > .ks-files > .ks-header > .ks-search {
+        width: 330px;
+        margin-right: 10px; }
+      .ks-filemanager-page > .ks-files > .ks-header > .ks-filters {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        -js-display: flex;
+        display: flex; }
+        .ks-filemanager-page > .ks-files > .ks-header > .ks-filters > .btn-group + .btn-group {
+          margin-left: 10px; }
+        .ks-filemanager-page > .ks-files > .ks-header > .ks-filters > .ks-view-type > label {
+          margin: 0; }
+    .ks-filemanager-page > .ks-files > .ks-breadcrubms {
+      background: #fff;
+      border-bottom: 1px solid #dee0e1;
+      height: 59px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      -js-display: flex;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding: 0 20px; }
+      .ks-filemanager-page > .ks-files > .ks-breadcrubms > .breadcrumb {
+        background: transparent;
+        margin-bottom: 0;
+        padding: 0; }
+        .ks-filemanager-page > .ks-files > .ks-breadcrubms > .breadcrumb > .ks-active {
+          color: #858585; }
+        .ks-filemanager-page > .ks-files > .ks-breadcrubms > .breadcrumb a {
+          color: #25628F; }
+    .ks-filemanager-page > .ks-files > .ks-content {
+      background: #fff;
+      padding: 20px; }
+      .ks-filemanager-page > .ks-files > .ks-content.ks-recent {
+        padding: 0; }
+        .ks-filemanager-page > .ks-files > .ks-content.ks-recent .ks-recent-box {
+          border-bottom: 1px solid #dee0e1;
+          padding: 20px; }
+          .ks-filemanager-page > .ks-files > .ks-content.ks-recent .ks-recent-box:last-child {
+            border: none; }
+          .ks-filemanager-page > .ks-files > .ks-content.ks-recent .ks-recent-box h6 {
+            margin-top: 5px;
+            font-weight: normal; }
+          .ks-filemanager-page > .ks-files > .ks-content.ks-recent .ks-recent-box ul {
+            margin-top: -20px;
+            padding-left: 0;
+            margin-bottom: 0; }
+      .ks-filemanager-page > .ks-files > .ks-content ul.ks-items {
+        padding: 0 20px 20px 20px;
+        margin: 0;
+        list-style: none;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        -js-display: flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap; }
+        .ks-filemanager-page > .ks-files > .ks-content ul.ks-items > .ks-item {
+          cursor: pointer;
+          margin-right: 20px;
+          margin-top: 20px;
+          position: relative; }
+          .ks-filemanager-page > .ks-files > .ks-content ul.ks-items > .ks-item > .ks-checkbox {
+            display: none;
+            position: absolute;
+            top: 67px;
+            left: 7px;
+            width: 12px;
+            height: 14px; }
+          .ks-filemanager-page > .ks-files > .ks-content ul.ks-items > .ks-item:hover > .ks-checkbox {
+            display: block; }
+          .ks-filemanager-page > .ks-files > .ks-content ul.ks-items > .ks-item:hover > .ks-thumb {
+            border: solid 1px #42a5f5; }
+          .ks-filemanager-page > .ks-files > .ks-content ul.ks-items > .ks-item.ks-checked > .ks-checkbox {
+            display: block; }
+          .ks-filemanager-page > .ks-files > .ks-content ul.ks-items > .ks-item.ks-checked > .ks-thumb {
+            background-color: #f5f6fa;
+            border: solid 1px #c4cbe1; }
+          .ks-filemanager-page > .ks-files > .ks-content ul.ks-items > .ks-item > .ks-thumb {
+            width: 90px;
+            height: 90px;
+            -webkit-border-radius: 2px;
+                    border-radius: 2px;
+            background-color: #fff;
+            border: solid 1px #dee0e1;
+            margin-bottom: 5px;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            -js-display: flex;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            text-align: center;
+            font-size: 45px;
+            color: #25628F; }
+            .ks-filemanager-page > .ks-files > .ks-content ul.ks-items > .ks-item > .ks-thumb::before {
+              width: 100%; }
+          .ks-filemanager-page > .ks-files > .ks-content ul.ks-items > .ks-item > .ks-filename {
+            display: block;
+            font-size: 12px;
+            color: #858585;
+            text-align: center; }
+      .ks-filemanager-page > .ks-files > .ks-content.ks-compact {
+        padding: 0; }
+        .ks-filemanager-page > .ks-files > .ks-content.ks-compact > .ks-table-header {
+          margin-bottom: 0; }
+        .ks-filemanager-page > .ks-files > .ks-content.ks-compact > .ks-table-content table tr:first-child td {
+          border-top: none; }
+        .ks-filemanager-page > .ks-files > .ks-content.ks-compact > .ks-table-content .ks-recent-box {
+          padding: 0; }
+          .ks-filemanager-page > .ks-files > .ks-content.ks-compact > .ks-table-content .ks-recent-box table tr:first-child td {
+            border-top: none; }
+          .ks-filemanager-page > .ks-files > .ks-content.ks-compact > .ks-table-content .ks-recent-box table tr:last-child td {
+            border-bottom: none; }
+          .ks-filemanager-page > .ks-files > .ks-content.ks-compact > .ks-table-content .ks-recent-box table td.ks-name-column {
+            padding-left: 20px; }
+          .ks-filemanager-page > .ks-files > .ks-content.ks-compact > .ks-table-content .ks-recent-box > .ks-header {
+            font-weight: normal;
+            margin: 0;
+            padding: 14px 20px;
+            border-bottom: 1px solid #dee0e1; }
+        .ks-filemanager-page > .ks-files > .ks-content.ks-compact.ks-recent table {
+          margin-bottom: 0; }
+          .ks-filemanager-page > .ks-files > .ks-content.ks-compact.ks-recent table thead th.ks-name-column {
+            padding-left: 20px; }
+        .ks-filemanager-page > .ks-files > .ks-content.ks-compact .table tbody td {
+          vertical-align: middle;
+          border-top-color: #ebeef5; }
+          .ks-filemanager-page > .ks-files > .ks-content.ks-compact .table tbody td.ks-checkbox-column {
+            padding-left: 15px;
+            padding-right: 15px; }
+            .ks-filemanager-page > .ks-files > .ks-content.ks-compact .table tbody td.ks-checkbox-column > .ks-checkbox {
+              margin-bottom: 0;
+              position: relative;
+              top: 1px; }
+          .ks-filemanager-page > .ks-files > .ks-content.ks-compact .table tbody td.ks-name-column {
+            padding-left: 0; }
+            .ks-filemanager-page > .ks-files > .ks-content.ks-compact .table tbody td.ks-name-column > .ks-icon {
+              font-size: 19px;
+              display: inline-block;
+              margin-right: 7px;
+              position: relative;
+              top: 2px; }
+        .ks-filemanager-page > .ks-files > .ks-content.ks-compact .table tbody tr {
+          position: relative; }
+          .ks-filemanager-page > .ks-files > .ks-content.ks-compact .table tbody tr:hover td, .ks-filemanager-page > .ks-files > .ks-content.ks-compact .table tbody tr.ks-checked td {
+            background-color: #f5f6fa;
+            color: #333;
+            cursor: pointer; }
+          .ks-filemanager-page > .ks-files > .ks-content.ks-compact .table tbody tr.ks-selected td {
+            background: #ebeef5;
+            color: #333; }
+            .ks-filemanager-page > .ks-files > .ks-content.ks-compact .table tbody tr.ks-selected td:first-child {
+              position: relative; }
+              .ks-filemanager-page > .ks-files > .ks-content.ks-compact .table tbody tr.ks-selected td:first-child::before {
+                content: '';
+                width: 4px;
+                height: 100%;
+                background: #d7dceb;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0; }
+        .ks-filemanager-page > .ks-files > .ks-content.ks-compact .table thead th {
+          border-top: none;
+          border-bottom-color: #dee0e1; }
+          .ks-filemanager-page > .ks-files > .ks-content.ks-compact .table thead th.ks-name-column {
+            padding-left: 0; }
+          .ks-filemanager-page > .ks-files > .ks-content.ks-compact .table thead th.ks-checkbox-column {
+            padding-left: 15px;
+            padding-right: 15px; }
+            .ks-filemanager-page > .ks-files > .ks-content.ks-compact .table thead th.ks-checkbox-column > .ks-checkbox {
+              margin-bottom: 0;
+              position: relative;
+              top: 1px; }
+  .ks-filemanager-page > .ks-info {
+    width: 312px;
+    min-width: 312px;
+    border-left: 1px solid #dee0e1;
+    background: #fff; }
+    .ks-filemanager-page > .ks-info.ks-selected-items > .ks-header {
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+    .ks-filemanager-page > .ks-info.ks-empty {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      -js-display: flex;
+      display: flex;
+      background-color: rgba(57, 81, 155, 0.05);
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .ks-filemanager-page > .ks-info.ks-empty > .ks-icon {
+        color: rgba(58, 82, 155, 0.1);
+        font-size: 64px;
+        margin-bottom: 20px; }
+      .ks-filemanager-page > .ks-info.ks-empty > .ks-text {
+        font-size: 12px;
+        color: #858585; }
+    .ks-filemanager-page > .ks-info > .ks-header {
+      padding: 12px 20px;
+      font-size: 14px;
+      color: #333333;
+      border-bottom: 1px solid #dee0e1;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      -js-display: flex;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      height: 59px; }
+      .ks-filemanager-page > .ks-info > .ks-header > .ks-icon {
+        font-size: 20px;
+        color: #25628F;
+        display: inline-block;
+        margin-right: 10px;
+        position: relative;
+        top: 1px; }
+    .ks-filemanager-page > .ks-info > .ks-controls {
+      padding: 10px 30px;
+      border-bottom: 1px solid #dee0e1; }
+      .ks-filemanager-page > .ks-info > .ks-controls .btn {
+        margin-right: 5px; }
+        .ks-filemanager-page > .ks-info > .ks-controls .btn:last-child {
+          margin-right: 0; }
+      .ks-filemanager-page > .ks-info > .ks-controls > .ks-image-preview {
+        margin-bottom: 10px; }
+        .ks-filemanager-page > .ks-info > .ks-controls > .ks-image-preview > img {
+          -webkit-border-radius: 2px;
+                  border-radius: 2px; }
+      .ks-filemanager-page > .ks-info > .ks-controls > .ks-audio-preview {
+        margin-bottom: 10px; }
+        .ks-filemanager-page > .ks-info > .ks-controls > .ks-audio-preview > .ks-album-name {
+          margin-bottom: 2px; }
+          .ks-filemanager-page > .ks-info > .ks-controls > .ks-audio-preview > .ks-album-name > span:first-child {
+            padding-right: 3px; }
+          .ks-filemanager-page > .ks-info > .ks-controls > .ks-audio-preview > .ks-album-name > span:last-child {
+            color: rgba(57, 81, 155, 0.4); }
+        .ks-filemanager-page > .ks-info > .ks-controls > .ks-audio-preview > .ks-song-name {
+          font-weight: 500;
+          margin-bottom: 7px; }
+        .ks-filemanager-page > .ks-info > .ks-controls > .ks-audio-preview > .ks-progress {
+          font-size: 10px;
+          color: #333; }
+          .ks-filemanager-page > .ks-info > .ks-controls > .ks-audio-preview > .ks-progress > .progress {
+            margin-bottom: 7px; }
+    .ks-filemanager-page > .ks-info > .ks-body {
+      padding: 30px; }
+      .ks-filemanager-page > .ks-info > .ks-body > .ks-item {
+        margin-bottom: 15px; }
+        .ks-filemanager-page > .ks-info > .ks-body > .ks-item:last-child {
+          margin-bottom: 0; }
+        .ks-filemanager-page > .ks-info > .ks-body > .ks-item > .ks-header {
+          font-size: 12px;
+          color: #858585;
+          margin-bottom: 3px; }
+        .ks-filemanager-page > .ks-info > .ks-body > .ks-item > .ks-text > .ks-icon {
+          font-size: 18px;
+          color: #25628F;
+          position: relative;
+          top: 2px;
+          display: inline-block;
+          margin-right: 2px; }
+
+@media screen and (max-width: 1200px) {
+  .btn.ks-filemanager-info-block-toggle {
+    position: static; }
+  .ks-filemanager-page > .ks-info {
+    position: fixed;
+    top: 120px;
+    bottom: 0;
+    right: -313px;
+    z-index: 2;
+    height: -webkit-calc(100% - 120px);
+    height: calc(100% - 120px); }
+    .ks-filemanager-page > .ks-info.ks-open {
+      right: 0;
+      -webkit-transition: right .2s ease;
+      transition: right .2s ease; } }
+
+@media screen and (max-width: 1068px) {
+  .ks-filemanager-page > .ks-files > .ks-header > .ks-search {
+    width: 100%; } }
+
+@media screen and (max-width: 880px) {
+  .btn.ks-filemanager-navigation-block-toggle {
+    position: static; }
+  .ks-filemanager-page > .ks-navigation {
+    position: fixed;
+    top: 120px;
+    bottom: 0;
+    left: -260px;
+    z-index: 2;
+    height: -webkit-calc(100% - 120px);
+    height: calc(100% - 120px); }
+    .ks-filemanager-page > .ks-navigation.ks-open {
+      left: 0;
+      -webkit-transition: left .2s ease;
+      transition: left .2s ease; } }
+
+@media screen and (max-width: 600px) {
+  .ks-filemanager-page > .ks-files > .ks-header {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .ks-filemanager-page > .ks-files > .ks-header > .ks-search {
+      margin-bottom: 15px; } }

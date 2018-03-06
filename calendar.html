@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="UTF-8">
+    <title>Basic usage</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/line-awesome/css/line-awesome.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="assets/fonts/open-sans/styles.css">-->
+
+    <link rel="stylesheet" type="text/css" href="assets/fonts/montserrat/styles.css">
+
+    <link rel="stylesheet" type="text/css" href="libs/tether/css/tether.min.css">
+    <link rel="stylesheet" type="text/css" href="libs/jscrollpane/jquery.jscrollpane.css">
+    <link rel="stylesheet" type="text/css" href="libs/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/common.min.css">
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!-- BEGIN THEME STYLES -->
+    <link rel="stylesheet" type="text/css" href="assets/styles/themes/primary.min.css">
+    <link class="ks-sidebar-dark-style" rel="stylesheet" type="text/css" href="assets/styles/themes/sidebar-black.min.css">
+    <!-- END THEME STYLES -->
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/kendo.all.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+
+    <link rel="stylesheet" type="text/css" href="libs/flatpickr/flatpickr.min.css"> <!-- Original -->
+<link rel="stylesheet" type="text/css" href="libs/fullcalendar/fullcalendar.min.css"> <!-- Original -->
+<link rel="stylesheet" type="text/css" href="assets/styles/libs/fullcalendar/fullcalendar.min.css"> <!-- Customization -->
+<link rel="stylesheet" type="text/css" href="assets/styles/apps/calendar.min.css"> <!-- Customization -->
+</head>
+<!-- END HEAD -->
+
+<body class="ks-navbar-fixed ks-sidebar-default ks-sidebar-position-fixed ks-page-header-fixed ks-theme-primary ks-page-loading"> <!-- remove ks-page-header-fixed to unfix header -->
+
+<!-- BEGIN HEADER -->
+<nav class="navbar ks-navbar">
+    <!-- BEGIN HEADER INNER -->
+    <!-- BEGIN LOGO -->
+    <div href="index.html" class="navbar-brand">
+        <!-- BEGIN RESPONSIVE SIDEBAR TOGGLER -->
+        <a href="#" class="ks-sidebar-toggle"><i class="ks-icon la la-bars" aria-hidden="true"></i></a>
+        <a href="#" class="ks-sidebar-mobile-toggle"><i class="ks-icon la la-bars" aria-hidden="true"></i></a>
+        <!-- END RESPONSIVE SIDEBAR TOGGLER -->
+
+        <div class="ks-navbar-logo">
+            <a href="index.html" class="ks-logo">Kosmo</a>
+
+            <!-- BEGIN GRID NAVIGATION -->
+            <!--<span class="nav-item dropdown ks-dropdown-grid">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                <div class="dropdown-menu ks-info ks-scrollable" aria-labelledby="Preview" data-height="260">
+                    <div class="ks-scroll-wrapper">
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-dashboard"></span>
+                            <span class="ks-text">Dashboard</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-flask"></span>
+                            <span class="ks-text">Projects</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-globe"></span>
+                            <span class="ks-text">Form</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-calendar-o"></span>
+                            <span class="ks-text">Calendar</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-ticket"></span>
+                            <span class="ks-text">Tickets</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-dashboard"></span>
+                            <span class="ks-text">Profile</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-dashboard"></span>
+                            <span class="ks-text">Documentation</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-dashboard"></span>
+                            <span class="ks-text">FAQ</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <span class="ks-icon la la-dashboard"></span>
+                            <span class="ks-text">Components</span>
+                        </a>
+                    </div>
+                </div>
+            </span>-->
+
+            <span class="nav-item dropdown ks-dropdown-grid-images">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                <div class="dropdown-menu ks-info ks-scrollable" aria-labelledby="Preview" data-height="260">
+                    <div class="ks-scroll-wrapper">
+                        <a href="#" class="ks-grid-item">
+                            <img class="ks-icon" src="assets/img/menu-grid/dashboard.png">
+                            <span class="ks-text">Dashboard</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <img class="ks-icon" src="assets/img/menu-grid/flask.png">
+                            <span class="ks-text">Projects</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <img class="ks-icon" src="assets/img/menu-grid/calendar.png">
+                            <span class="ks-text">Calendar</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <img class="ks-icon" src="assets/img/menu-grid/profile.png">
+                            <span class="ks-text">Profile</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <img class="ks-icon" src="assets/img/menu-grid/ticket.png">
+                            <span class="ks-text">Tickets</span>
+                        </a>
+                        <a href="#" class="ks-grid-item">
+                            <img class="ks-icon" src="assets/img/menu-grid/settings.png">
+                            <span class="ks-text">Settings</span>
+                        </a>
+                    </div>
+                </div>
+            </span>
+
+            <!-- END GRID NAVIGATION -->
+        </div>
+    </div>
+    <!-- END LOGO -->
+
+    <!-- BEGIN MENUS -->
+    <div class="ks-wrapper">
+        <nav class="nav navbar-nav">
+            <!-- BEGIN NAVBAR MENU -->
+            <div class="ks-navbar-menu">
+                <form class="ks-search-form">
+                    <a class="ks-search-open" href="#">
+                        <span class="la la-search"></span>
+                    </a>
+                    <div class="ks-wrapper">
+                        <div class="input-icon icon-right icon icon-lg icon-color-primary">
+                            <input id="input-group-icon-text" type="text" class="form-control" placeholder="Search...">
+                            <span class="icon-addon">
+                                <span class="la la-search ks-icon"></span>
+                            </span>
+                        </div>
+                        <a class="ks-search-close" href="#">
+                            <span class="la la-close"></span>
+                        </a>
+                    </div>
+                </form>
+                <a class="nav-item nav-link" href="#">Dashboard</a>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu ks-info" aria-labelledby="Preview">
+                        <a class="dropdown-item ks-active" href="#">Dropdown Link 1</a>
+                        <a class="dropdown-item" href="#">Dropdown Link 2</a>
+                        <a class="dropdown-item" href="#">Dropdown Link 3</a>
+                        <div class="dropdown-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="Preview">
+                                <a class="dropdown-item" href="#">Dropdown Link 1</a>
+                                <a class="dropdown-item" href="#">Dropdown Link 2</a>
+                                <a class="dropdown-item" href="#">Dropdown Link 3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item nav-link ks-btn-action">
+                    <a class="btn btn-info" href="https://themeforest.net/item/kosmo-multi-purpose-responsive-bootstrap-4-admin-template-ui-framework/19506620?ref=themesanytime">Buy Now!</a>
+                </div>
+            </div>
+            <!-- END NAVBAR MENU -->
+
+            <!-- BEGIN NAVBAR ACTIONS -->
+            <div class="ks-navbar-actions">
+                <!-- BEGIN NAVBAR ACTION BUTTON -->
+                <div class="nav-item nav-link btn-action-block">
+                    <a class="btn btn-danger" href="#">
+                        <span class="ks-action">Activate Your Account</span>
+                        <span class="ks-description">trial ends in 1 day</span>
+                    </a>
+                </div>
+                <!-- END NAVBAR ACTION BUTTON -->
+
+                <!-- BEGIN NAVBAR LANGUAGES -->
+                <div class="nav-item dropdown ks-languages">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        EN <span class="ks-text">Languages</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right ks-scrollable" aria-labelledby="Preview">
+                        <div class="ks-wrapper">
+                            <a href="#" class="ks-language ks-selected">
+                                <span class="flag-icon flag-icon-us ks-icon"></span>
+                                <span class="ks-text">English</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-pl ks-icon"></span>
+                                <span class="ks-text">Polski</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-de ks-icon"></span>
+                                <span class="ks-text">Deutsch</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-lt ks-icon"></span>
+                                <span class="ks-text">Lietuvių</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-fr ks-icon"></span>
+                                <span class="ks-text">Français</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-by ks-icon"></span>
+                                <span class="ks-text">Беларуская</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-it ks-icon"></span>
+                                <span class="ks-text">Italiano</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-ua ks-icon"></span>
+                                <span class="ks-text">Українська</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-es ks-icon"></span>
+                                <span class="ks-text">Español</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-ru ks-icon"></span>
+                                <span class="ks-text">Русский</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-cz ks-icon"></span>
+                                <span class="ks-text">Česky</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-jp ks-icon"></span>
+                                <span class="ks-text">日本語</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-cn ks-icon"></span>
+                                <span class="ks-text">中文</span>
+                            </a>
+                            <a href="#" class="ks-language">
+                                <span class="flag-icon flag-icon-tr ks-icon"></span>
+                                <span class="ks-text">Türkçe</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- END NAVBAR LANGUAGES -->
+
+                <!-- BEGIN NAVBAR MESSAGES -->
+                <div class="nav-item dropdown ks-messages">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="la la-envelope ks-icon" aria-hidden="true">
+                            <span class="badge badge-pill badge-info">3</span>
+                        </span>
+                        <span class="ks-text">Messages</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="Preview">
+                        <section class="ks-tabs-actions">
+                            <a href="#"><i class="la la-plus ks-icon"></i></a>
+                            <a href="#"><i class="la la-search ks-icon"></i></a>
+                        </section>
+                        <ul class="nav nav-tabs ks-nav-tabs ks-info" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" data-toggle="tab" data-target="#ks-navbar-messages-inbox" role="tab">Inbox</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="tab" data-target="#ks-navbar-messages-sent" role="tab">Sent</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="tab" data-target="#ks-navbar-messages-archive" role="tab">Archive</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane ks-messages-tab active" id="ks-navbar-messages-inbox" role="tabpanel">
+                                <div class="ks-wrapper ks-scrollable">
+                                    <a href="#" class="ks-message">
+                                        <div class="ks-avatar ks-online">
+                                            <img src="assets/img/avatars/avatar-1.jpg" width="36" height="36">
+                                        </div>
+                                        <div class="ks-info">
+                                            <div class="ks-user-name">Emily Carter</div>
+                                            <div class="ks-text">In golf, Danny Willett (pictured) wins the M...</div>
+                                            <div class="ks-datetime">1 minute ago</div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="ks-message">
+                                        <div class="ks-avatar ks-online">
+                                            <img src="assets/img/avatars/avatar-5.jpg" width="36" height="36">
+                                        </div>
+                                        <div class="ks-info">
+                                            <div class="ks-user-name">Emily Carter</div>
+                                            <div class="ks-text">In golf, Danny Willett (pictured) wins the M...</div>
+                                            <div class="ks-datetime">1 minute ago</div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="ks-message">
+                                        <div class="ks-avatar ks-offline">
+                                            <img src="assets/img/avatars/placeholders/ava-36.png" width="36" height="36">
+                                        </div>
+                                        <div class="ks-info">
+                                            <div class="ks-user-name">Emily Carter</div>
+                                            <div class="ks-text">In golf, Danny Willett (pictured) wins the M...</div>
+                                            <div class="ks-datetime">1 minute ago</div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="ks-message">
+                                        <div class="ks-avatar ks-offline">
+                                            <img src="assets/img/avatars/avatar-4.jpg" width="36" height="36">
+                                        </div>
+                                        <div class="ks-info">
+                                            <div class="ks-user-name">Emily Carter</div>
+                                            <div class="ks-text">In golf, Danny Willett (pictured) wins the M...</div>
+                                            <div class="ks-datetime">1 minute ago</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="ks-view-all">
+                                    <a href="#">View all</a>
+                                </div>
+                            </div>
+                            <div class="tab-pane ks-empty" id="ks-navbar-messages-sent" role="tabpanel">
+                                There are no messages.
+                            </div>
+                            <div class="tab-pane ks-empty" id="ks-navbar-messages-archive" role="tabpanel">
+                                There are no messages.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END NAVBAR MESSAGES -->
+
+                <!-- BEGIN NAVBAR NOTIFICATIONS -->
+                <div class="nav-item dropdown ks-notifications">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="la la-bell ks-icon" aria-hidden="true">
+                            <span class="badge badge-pill badge-info">7</span>
+                        </span>
+                        <span class="ks-text">Notifications</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="Preview">
+                        <ul class="nav nav-tabs ks-nav-tabs ks-info" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" data-toggle="tab" data-target="#navbar-notifications-all" role="tab">All</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="tab" data-target="#navbar-notifications-activity" role="tab">Activity</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="tab" data-target="#navbar-notifications-comments" role="tab">Comments</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane ks-notifications-tab active" id="navbar-notifications-all" role="tabpanel">
+                                <div class="ks-wrapper ks-scrollable">
+                                    <a href="#" class="ks-notification">
+                                        <div class="ks-avatar">
+                                            <img src="assets/img/avatars/avatar-3.jpg" width="36" height="36">
+                                        </div>
+                                        <div class="ks-info">
+                                            <div class="ks-user-name">Emily Carter <span class="ks-description">has uploaded 1 file</span></div>
+                                            <div class="ks-text"><span class="la la-file-text-o ks-icon"></span> logo vector doc</div>
+                                            <div class="ks-datetime">1 minute ago</div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="ks-notification">
+                                        <div class="ks-action">
+                                            <span class="ks-default">
+                                                <span class="la la-briefcase ks-icon"></span>
+                                            </span>
+                                        </div>
+                                        <div class="ks-info">
+                                            <div class="ks-user-name">New project created</div>
+                                            <div class="ks-text">Dashboard UI</div>
+                                            <div class="ks-datetime">1 minute ago</div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="ks-notification">
+                                        <div class="ks-action">
+                                            <span class="ks-error">
+                                                <span class="la la-times-circle ks-icon"></span>
+                                            </span>
+                                        </div>
+                                        <div class="ks-info">
+                                            <div class="ks-user-name">File upload error</div>
+                                            <div class="ks-text"><span class="la la-file-text-o ks-icon"></span> logo vector doc</div>
+                                            <div class="ks-datetime">10 minutes ago</div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="ks-view-all">
+                                    <a href="#">Show more</a>
+                                </div>
+                            </div>
+                            <div class="tab-pane ks-empty" id="navbar-notifications-activity" role="tabpanel">
+                                There are no activities.
+                            </div>
+                            <div class="tab-pane ks-empty" id="navbar-notifications-comments" role="tabpanel">
+                                There are no comments.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END NAVBAR NOTIFICATIONS -->
+
+                <!-- BEGIN NAVBAR USER -->
+                <div class="nav-item dropdown ks-user">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="ks-avatar">
+                            <img src="assets/img/avatars/avatar-13.jpg" width="36" height="36">
+                        </span>
+                        <span class="ks-info">
+                            <span class="ks-name">Robert Dean</span>
+                            <span class="ks-description">Premium User</span>
+                        </span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="Preview">
+                        <a class="dropdown-item" href="#">
+                            <span class="la la-user ks-icon"></span>
+                            <span>Profile</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <span class="la la-wrench ks-icon" aria-hidden="true"></span>
+                            <span>Settings</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <span class="la la-question-circle ks-icon" aria-hidden="true"></span>
+                            <span>Help</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <span class="la la-sign-out ks-icon" aria-hidden="true"></span>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- END NAVBAR USER -->
+            </div>
+            <!-- END NAVBAR ACTIONS -->
+        </nav>
+
+        <!-- BEGIN NAVBAR ACTIONS TOGGLER -->
+        <nav class="nav navbar-nav ks-navbar-actions-toggle">
+            <a class="nav-item nav-link" href="#">
+                <span class="la la-ellipsis-h ks-icon ks-open"></span>
+                <span class="la la-close ks-icon ks-close"></span>
+            </a>
+        </nav>
+        <!-- END NAVBAR ACTIONS TOGGLER -->
+
+        <!-- BEGIN NAVBAR MENU TOGGLER -->
+        <nav class="nav navbar-nav ks-navbar-menu-toggle">
+            <a class="nav-item nav-link" href="#">
+                <span class="la la-th ks-icon ks-open"></span>
+                <span class="la la-close ks-icon ks-close"></span>
+            </a>
+        </nav>
+        <!-- END NAVBAR MENU TOGGLER -->
+    </div>
+    <!-- END MENUS -->
+    <!-- END HEADER INNER -->
+</nav>
+<!-- END HEADER -->
+
+
+
+
+
+
+<div class="ks-page-container">
+
+    <div class="ks-column ks-page">
+
+        <div id="scheduler"></div>
+
+
+    </div>
+</div>
+
+
+
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script src="libs/responsejs/response.min.js"></script>
+<script src="libs/loading-overlay/loadingoverlay.min.js"></script>
+<script src="libs/tether/js/tether.min.js"></script>
+<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="libs/jscrollpane/jquery.jscrollpane.min.js"></script>
+<script src="libs/jscrollpane/jquery.mousewheel.js"></script>
+<script src="libs/flexibility/flexibility.js"></script>
+<script src="libs/noty/noty.min.js"></script>
+<script src="libs/velocity/velocity.min.js"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+
+<!-- BEGIN THEME LAYOUT SCRIPTS -->
+<script src="assets/scripts/common.min.js"></script>
+<!-- END THEME LAYOUT SCRIPTS -->
+
+<script src="libs/momentjs/moment-with-locales.min.js"></script>
+<script src="libs/flatpickr/flatpickr.min.js"></script>
+<script type="application/javascript">
+(function($) {
+    $(document).ready(function () {
+        var offsetTop = $('#ks-calendar').offset().top - 60;
+        var bodyHeight = $('body').height();
+
+        $('#ks-calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+            },
+            height: bodyHeight - offsetTop,
+            defaultDate: '2016-06-12',
+            editable: true,
+            selectable: true,
+            eventLimit: true, // allow "more" link when too many events
+            droppable: true,
+            events: [
+                {
+                    title: 'All Day Event',
+                    start: '2016-06-01',
+                    className: 'ks-danger'
+                },
+                {
+                    title: 'Long Event',
+                    start: '2016-06-07',
+                    end: '2016-06-10',
+                    className: 'ks-grey'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2016-06-09T16:00:00',
+                    className: 'ks-success'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2016-06-16T16:00:00',
+                    className: 'ks-success'
+                },
+                {
+                    title: 'Conference',
+                    start: '2016-06-11',
+                    end: '2016-06-13'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2016-06-12T10:30:00',
+                    end: '2016-06-12T12:30:00'
+                },
+                {
+                    title: 'Lunch',
+                    start: '2016-06-12T12:00:00'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2016-06-12T14:30:00'
+                },
+                {
+                    title: 'Happy Hour',
+                    start: '2016-06-12T17:30:00'
+                },
+                {
+                    title: 'Dinner',
+                    start: '2016-06-12T20:00:00'
+                },
+                {
+                    title: 'Birthday Party',
+                    start: '2016-06-13T07:00:00',
+                    className: 'ks-warning'
+                },
+                {
+                    title: 'Click for Google',
+                    url: 'http://google.com/',
+                    start: '2016-06-28'
+                }
+            ],
+            eventAfterAllRender: function(view) {
+                $('#ks-calendar .fc-scroller').jScrollPane();
+            }
+        });
+
+        $('.ks-datepicker .flatpickr').flatpickr();
+
+        if (Response.band(0, 780) || Response.wave(0, 790)) {
+            Kosmo.makeScrollable('.ks-calendar-container > .ks-info');
+        }
+    });
+})(jQuery);
+</script>
+<div class="ks-mobile-overlay"></div>
+
+<script>
+    // Import DejaVu Sans font for embedding
+    // NOTE: Only required if the Kendo UI stylesheets are loaded
+    // from a different origin, e.g. cdn.kendostatic.com
+    kendo.pdf.defineFont({
+        "DejaVu Sans"             : "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans.ttf",
+        "DejaVu Sans|Bold"        : "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans-Bold.ttf",
+        "DejaVu Sans|Bold|Italic" : "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans-Oblique.ttf",
+        "DejaVu Sans|Italic"      : "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans-Oblique.ttf",
+        "WebComponentsIcons"      : "https://kendo.cdn.telerik.com/2017.1.223/styles/fonts/glyphs/WebComponentsIcons.ttf"
+    });
+</script>
+
+<!-- Load Pako ZLIB library to enable PDF compression -->
+<script src="https://kendo.cdn.telerik.com/2018.1.117/js/pako_deflate.min.js"></script>
+<!-- Export to iCal
+<script src="https://rawgit.com/nwcell/ics.js/master/ics.js"></script>
+<button id="export">Log selected events</div>
+-->
+
+<script>
+    $(function() {
+
+        $("#scheduler").kendoScheduler({
+            toolbar: [ "pdf" ],
+            pdf: {
+                fileName: "ESIPlanner Calendar Export.pdf",
+                proxyURL: "https://demos.telerik.com/kendo-ui/service/export"
+            },
+            //selectable: true,
+            date :new Date ("2018/02/11") ,
+            height:642,
+            showWorkHours:true,
+            workDayStart: new Date("2018/1/1 8:30 AM"),
+            workDayEnd: new Date("2018/1/1 5:30 PM"),
+            workWeekStart:0,
+            workWeekEnd:4,
+
+            views: [
+                "day",
+                { type: "week", selected: true },
+                "workWeek",
+                "month",
+                "agenda"
+            ],
+            dataSource : [
+                {
+                    id:1,
+                    title:"POO Cour - A1 - Sadeg",
+                    start: new Date ("2018/02/11 08:30 AM"),
+                    end: new Date ("2018/02/11 10:30 AM"),
+                    roomId:1,
+                    group:3,
+                    prof:1,
+
+                },
+                {
+                    id:2,
+                    title:"LOGM TD - S11 - Meziani",
+                    start: new Date ("2018/02/11 01:00 PM"),
+                    end: new Date ("2018/02/11 03:00 PM"),
+                    roomId:6,
+                    group:2,
+                    prof:3,
+
+                }
+
+            ],
+            resources : [
+                {
+                    field : "group",
+                    dataSource : [
+                        {value :1 , text :"2CPI_G5"},
+                        {value :2 , text :"2CPI_G6"},
+                        {value :3 , text :"2CPI_G7"},
+                        {value :4 , text :"2CPI_G8"},
+                    ],
+                    title: "Groupe",
+                    name :"group"
+                },
+                {
+                    field : "prof",
+                    dataSource : [
+                        {value :1 , text :"Sadeg"},
+                        {value :2 , text :"Bourai"},
+                        {value :3 , text :"Meziani"},
+                        {value :4 , text :"Temeglit"},
+                    ],
+                    title: "Prefesseur",
+                    name :"prof"
+
+                },
+                {
+                    field : "roomId",
+                    dataSource : [
+                        {value :1 , text :"A1"},
+                        {value :2 , text :"A2"},
+                        {value :3 , text :"A3"},
+                        {value :4 , text :"A4"},
+                        {value :5 , text :"AP1"},
+
+                    ],
+                    title: "Salle",
+                    name :"Salle"
+
+                },
+
+
+            ],
+
+
+            /*
+                        group : {
+                            resources: ["Salle"],
+                            orientation: "vertical",
+                        },
+            */
+
+            resize: function(e) {
+                if (roomIsOccupied(e.start, e.end, e.event, e.resources) || groupIsOccupied(e.start, e.end, e.event, e.resources)) {
+                    this.wrapper.find(".k-marquee-color").addClass("invalid-slot");
+                    e.preventDefault();
+                }
+            },
+            resizeEnd: function(e) {
+                if (!checkAvailability(e.start, e.end, e.events)) {
+                    e.preventDefault();
+                }
+            },
+            move: function(e) {
+                if (roomIsOccupied(e.start, e.end, e.event, e.resources) || groupIsOccupied(e.start, e.end, e.event, e.resources) || profIsOccupied(e.start, e.end, e.event, e.resources) ) {
+                    this.wrapper.find(".k-event-drag-hint").addClass("invalid-slot");
+                }
+            },
+            moveEnd: function(e) {
+                if (!checkAvailability(e.start, e.end, e.event, e.resources)) {
+                    e.preventDefault();
+                }
+
+            },
+            add: function(e) {
+                if (!checkAvailability(e.event.start, e.event.end, e.event)) {
+                    e.preventDefault();
+                }
+            },
+            save: function(e) {
+                if (!checkAvailability(e.event.start, e.event.end, e.event)) {
+                    e.preventDefault();
+                }
+            },
+
+        });
+
+
+        function occurrencesInRangeByResource(start, end, resourceFieldName, event, resources) {
+            var scheduler = $("#scheduler").getKendoScheduler();
+
+            var occurrences = scheduler.occurrencesInRange(start, end);
+
+            var idx = occurrences.indexOf(event);
+            if (idx > -1) {
+                occurrences.splice(idx, 1);
+            }
+
+            event = $.extend({}, event, resources);
+
+            return filterByResource(occurrences, resourceFieldName, event[resourceFieldName]);
+        }
+
+        function filterByResource(occurrences, resourceFieldName, value) {
+            var result = [];
+            var occurrence;
+
+            for(var idx = 0, length = occurrences.length; idx < length; idx++) {
+                occurrence = occurrences[idx];
+                if (occurrence[resourceFieldName] === value) {
+                    result.push(occurrence);
+                }
+            }
+            return result;
+        }
+
+        function groupIsOccupied(start, end, event, resources) {
+            var occurrences = occurrencesInRangeByResource(start, end, "group", event, resources);
+            if (occurrences.length > 0) {
+                return true;
+            }
+            return false;
+        }
+
+        function profIsOccupied(start, end, event, resources) {
+            var occurrences = occurrencesInRangeByResource(start, end, "prof", event, resources);
+            if (occurrences.length > 0) {
+                return true;
+            }
+            return false;
+        }
+
+
+        function roomIsOccupied(start, end, event, resources) {
+            var occurrences = occurrencesInRangeByResource(start, end, "roomId", event, resources);
+            if (occurrences.length > 0) {
+                return true;
+            }
+            return false;
+        }
+
+        function checkAvailability(start, end, event, resources) {
+
+            if (groupIsOccupied(start, end, event, resources)) {
+                setTimeout(function() {
+                    alert("This group is not available in this time period.");
+                }, 0);
+
+                return false;
+            }
+
+            if (profIsOccupied(start, end, event, resources)) {
+                setTimeout(function() {
+                    alert("This Professor is not available in this time period.");
+                }, 0);
+
+                return false;
+            }
+
+            if (roomIsOccupied(start, end, event, resources)) {
+                setTimeout(function() {
+                    alert("This room is not available in this time period.");
+                }, 0);
+
+                return false;
+            }
+
+            return true;
+        }
+
+
+
+        var scheduler = $("#scheduler").data("kendoScheduler");
+
+        $(".k-scheduler-toolbar .k-scheduler-tools").append('<li class="box-col"> <select id="k-groupeDD"> <option value="None">Grouping: None</option> <option value="Salle">Salle</option> <option value="group">Group</option> <option value="prof">Professeur</option> </select> </li>');
+
+        $("#k-groupeDD").kendoDropDownList({
+            change: function() {
+                if (this.value()==="None") {
+                    delete scheduler.options.group;
+
+                }else{
+                    scheduler.options.group = {
+                        resources: [this.value()],
+                        orientation: "vertical",
+                    };
+                }
+                scheduler.view(scheduler.view().name);
+
+            }
+        });
+
+        var selectedEvents = [];
+        $("#export").click(function() {
+            var cal = ics();
+            var event;
+
+            for (var idx = 0, length = selectedEvents.length; idx < length; idx++) {
+                event = selectedEvents[idx];
+                cal.addEvent(event.title, event.description, "", event.start, event.end);
+            }
+
+            var icalEvents = cal.events();
+
+            console.log(icalEvents);
+        });
+
+
+        scheduler.wrapper.find(".k-nav-current").hide();
+
+        $("#calendar").kendoCalendar({
+            value: scheduler.date(),
+            change: function() {
+                scheduler.date(this.value());
+            }
+        })
+
+
+    });
+
+
+
+
+</script>
+
+<style>
+    .invalid-slot {
+        background: red !important;
+        cursor: no-drop;
+
+    }
+    html
+    {
+        font: 12px sans-serif;
+    }
+
+</style>
+
+
+
+</body>
+</html>

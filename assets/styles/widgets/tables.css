@@ -1,0 +1,153 @@
+.panel.ks-information .card-block > .ks-table-description, .ks-panel.ks-information .card-block > .ks-table-description {
+  width: 100%; }
+  .panel.ks-information .card-block > .ks-table-description td, .ks-panel.ks-information .card-block > .ks-table-description td {
+    vertical-align: top;
+    font-size: 14px;
+    padding-bottom: 10px; }
+    .panel.ks-information .card-block > .ks-table-description td.ks-icon, .ks-panel.ks-information .card-block > .ks-table-description td.ks-icon {
+      width: 20px;
+      padding-right: 15px;
+      color: #25628F;
+      font-size: 20px;
+      line-height: 20px;
+      opacity: 0.5;
+      position: relative;
+      top: 1px;
+      text-align: center; }
+  .panel.ks-information .card-block > .ks-table-description tr:last-child td, .ks-panel.ks-information .card-block > .ks-table-description tr:last-child td {
+    padding-bottom: 0; }
+
+.panel.ks-information .card-block > .ks-user-list, .ks-panel.ks-information .card-block > .ks-user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  .panel.ks-information .card-block > .ks-user-list > .ks-item, .ks-panel.ks-information .card-block > .ks-user-list > .ks-item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex;
+    margin-bottom: 15px; }
+    .panel.ks-information .card-block > .ks-user-list > .ks-item:last-child, .ks-panel.ks-information .card-block > .ks-user-list > .ks-item:last-child {
+      margin-bottom: 0; }
+    .panel.ks-information .card-block > .ks-user-list > .ks-item > .ks-avatar, .ks-panel.ks-information .card-block > .ks-user-list > .ks-item > .ks-avatar {
+      margin-right: 10px; }
+    .panel.ks-information .card-block > .ks-user-list > .ks-item > .ks-body > .ks-name, .ks-panel.ks-information .card-block > .ks-user-list > .ks-item > .ks-body > .ks-name {
+      font-size: 14px;
+      line-height: 14px;
+      margin-bottom: 5px; }
+    .panel.ks-information .card-block > .ks-user-list > .ks-item > .ks-body > .ks-text, .ks-panel.ks-information .card-block > .ks-user-list > .ks-item > .ks-body > .ks-text {
+      font-size: 12px;
+      color: #858585; }
+
+.panel.ks-information .card-block > .ks-info-list > .ks-item, .ks-panel.ks-information .card-block > .ks-info-list > .ks-item {
+  margin-bottom: 15px; }
+  .panel.ks-information .card-block > .ks-info-list > .ks-item:last-child, .ks-panel.ks-information .card-block > .ks-info-list > .ks-item:last-child {
+    margin-bottom: 0; }
+  .panel.ks-information .card-block > .ks-info-list > .ks-item > .ks-name, .ks-panel.ks-information .card-block > .ks-info-list > .ks-item > .ks-name {
+    color: #858585;
+    margin-bottom: 3px; }
+
+.panel.ks-information .card-block.ks-datatable, .ks-panel.ks-information .card-block.ks-datatable {
+  padding: 0; }
+  .panel.ks-information .card-block.ks-datatable .dataTables_wrapper, .ks-panel.ks-information .card-block.ks-datatable .dataTables_wrapper {
+    padding: 0;
+    margin-bottom: 10px; }
+  .panel.ks-information .card-block.ks-datatable .dataTables_info, .ks-panel.ks-information .card-block.ks-datatable .dataTables_info {
+    padding-left: 30px; }
+  .panel.ks-information .card-block.ks-datatable .dataTables_paginate, .ks-panel.ks-information .card-block.ks-datatable .dataTables_paginate {
+    padding-right: 30px; }
+  .panel.ks-information .card-block.ks-datatable .table, .ks-panel.ks-information .card-block.ks-datatable .table {
+    border: none; }
+    .panel.ks-information .card-block.ks-datatable .table thead th, .ks-panel.ks-information .card-block.ks-datatable .table thead th {
+      background: rgba(57, 80, 155, 0.05);
+      border: none;
+      border-bottom: 1px solid rgba(57, 80, 155, 0.2); }
+      .panel.ks-information .card-block.ks-datatable .table thead th:first-child, .ks-panel.ks-information .card-block.ks-datatable .table thead th:first-child {
+        padding-left: 30px; }
+      .panel.ks-information .card-block.ks-datatable .table thead th:last-child, .ks-panel.ks-information .card-block.ks-datatable .table thead th:last-child {
+        padding-right: 30px; }
+    .panel.ks-information .card-block.ks-datatable .table td, .ks-panel.ks-information .card-block.ks-datatable .table td {
+      vertical-align: middle;
+      border-top: none;
+      border-right: none;
+      border-bottom: 1px solid rgba(57, 80, 155, 0.1); }
+      .panel.ks-information .card-block.ks-datatable .table td:first-child, .ks-panel.ks-information .card-block.ks-datatable .table td:first-child {
+        padding-left: 30px; }
+      .panel.ks-information .card-block.ks-datatable .table td:last-child, .ks-panel.ks-information .card-block.ks-datatable .table td:last-child {
+        padding-right: 30px; }
+      .panel.ks-information .card-block.ks-datatable .table td.ks-controls, .ks-panel.ks-information .card-block.ks-datatable .table td.ks-controls {
+        width: 1px;
+        text-align: right; }
+        .panel.ks-information .card-block.ks-datatable .table td.ks-controls > .dropdown, .ks-panel.ks-information .card-block.ks-datatable .table td.ks-controls > .dropdown {
+          position: relative;
+          top: 2px; }
+          .panel.ks-information .card-block.ks-datatable .table td.ks-controls > .dropdown > .btn-link, .ks-panel.ks-information .card-block.ks-datatable .table td.ks-controls > .dropdown > .btn-link {
+            padding: 3px 0;
+            font-size: 22px; }
+      .panel.ks-information .card-block.ks-datatable .table td > .ks-user > .ks-avatar, .ks-panel.ks-information .card-block.ks-datatable .table td > .ks-user > .ks-avatar {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-right: 6px; }
+      .panel.ks-information .card-block.ks-datatable .table td > .ks-user > .ks-name, .ks-panel.ks-information .card-block.ks-datatable .table td > .ks-user > .ks-name {
+        position: relative;
+        top: 2px; }
+
+.panel.ks-information .card-block.ks-slider, .ks-panel.ks-information .card-block.ks-slider {
+  display: block;
+  padding: 0;
+  padding-top: 30px; }
+  .panel.ks-information .card-block.ks-slider .swiper-container, .ks-panel.ks-information .card-block.ks-slider .swiper-container {
+    height: 330px;
+    max-width: -webkit-calc(100% - 80px);
+    max-width: calc(100% - 80px); }
+  .panel.ks-information .card-block.ks-slider .swiper-slide, .ks-panel.ks-information .card-block.ks-slider .swiper-slide {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 285px; }
+    .panel.ks-information .card-block.ks-slider .swiper-slide > .card, .ks-panel.ks-information .card-block.ks-slider .swiper-slide > .card {
+      width: 200px;
+      height: 285px;
+      margin: 0; }
+      .panel.ks-information .card-block.ks-slider .swiper-slide > .card > .ks-image, .ks-panel.ks-information .card-block.ks-slider .swiper-slide > .card > .ks-image {
+        height: 200px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        -js-display: flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center; }
+      .panel.ks-information .card-block.ks-slider .swiper-slide > .card > .ks-description, .ks-panel.ks-information .card-block.ks-slider .swiper-slide > .card > .ks-description {
+        border-top: solid 1px rgba(57, 81, 155, 0.2);
+        padding: 15px; }
+        .panel.ks-information .card-block.ks-slider .swiper-slide > .card > .ks-description > .ks-name, .ks-panel.ks-information .card-block.ks-slider .swiper-slide > .card > .ks-description > .ks-name {
+          font-size: 14px;
+          font-weight: 500;
+          display: block;
+          margin-bottom: 8px;
+          color: #333; }
+        .panel.ks-information .card-block.ks-slider .swiper-slide > .card > .ks-description > .ks-price, .ks-panel.ks-information .card-block.ks-slider .swiper-slide > .card > .ks-description > .ks-price {
+          -webkit-border-radius: 2px;
+                  border-radius: 2px;
+          background-color: rgba(57, 80, 155, 0.1);
+          padding: 6px 15px;
+          color: #25628F;
+          font-size: 12px; }

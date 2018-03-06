@@ -1,0 +1,369 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Container / .ks-project-tasks-page
+2. Tasks header / .ks-project-tasks-page > .ks-header
+3. Tasks project logo / .ks-project-tasks-page > .ks-header > .ks-project > .ks-logo
+4. Search and Users list / .ks-project-tasks-page > .ks-header > .ks-extras
+5. Tasks list / .ks-project-tasks-page > .ks-body
+-------------------------------------------------------------------*/
+.ks-project-tasks-page {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%; }
+  .ks-project-tasks-page > .ks-header {
+    background: #fff;
+    height: 59px;
+    border-bottom: 1px solid #dee0e1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 30px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .ks-project-tasks-page > .ks-header > .ks-project {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      -js-display: flex;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .ks-project-tasks-page > .ks-header > .ks-project > .ks-logo {
+        width: 36px;
+        height: 36px;
+        background-color: #fff;
+        border: solid 1px #dee0e1;
+        -webkit-border-radius: 50%;
+                border-radius: 50%;
+        margin-right: 15px; }
+      .ks-project-tasks-page > .ks-header > .ks-project > .ks-name {
+        font-size: 18px; }
+    .ks-project-tasks-page > .ks-header > .ks-extras {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      -js-display: flex;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .ks-project-tasks-page > .ks-header > .ks-extras > .ks-search {
+        width: 318px; }
+      .ks-project-tasks-page > .ks-header > .ks-extras > .ks-users {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        -js-display: flex;
+        display: flex;
+        margin-left: 40px; }
+        .ks-project-tasks-page > .ks-header > .ks-extras > .ks-users > a {
+          margin-right: 10px;
+          width: 26px;
+          height: 26px; }
+          .ks-project-tasks-page > .ks-header > .ks-extras > .ks-users > a.ks-add {
+            -webkit-border-radius: 50%;
+                    border-radius: 50%;
+            color: #25628F;
+            display: -webkit-inline-box;
+            display: -webkit-inline-flex;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            line-height: 14px;
+            background-color: #fff;
+            font-size: 19px;
+            border: solid 1px #c4cbe1; }
+            .ks-project-tasks-page > .ks-header > .ks-extras > .ks-users > a.ks-add:hover {
+              border: 1px solid #25628F; }
+          .ks-project-tasks-page > .ks-header > .ks-extras > .ks-users > a:last-child {
+            margin-right: 0; }
+  .ks-project-tasks-page > .ks-body {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex; }
+    .ks-project-tasks-page > .ks-body > .ks-tasks-board {
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1; }
+      .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper {
+        padding: 30px;
+        height: 100%; }
+        .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task-create {
+          height: 56px;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          -js-display: flex;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          padding: 0 20px;
+          margin-bottom: 15px; }
+          .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task-create > .ks-icon-add {
+            font-size: 20px;
+            position: relative; }
+          .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task-create > .form-control {
+            border: none;
+            font-size: 14px; }
+        .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task + .ks-task {
+          margin-top: 15px; }
+        .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task > .ks-header {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          -js-display: flex;
+          display: flex;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          height: 56px;
+          padding: 0 20px; }
+          .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task > .ks-header > .custom-control {
+            margin-right: 15px; }
+          .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task > .ks-header > .ks-name {
+            -webkit-box-flex: 1;
+            -webkit-flex-grow: 1;
+                -ms-flex-positive: 1;
+                    flex-grow: 1;
+            font-size: 14px;
+            line-height: 14px;
+            font-weight: 500;
+            color: #333; }
+          .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task > .ks-header > .ks-progress {
+            margin-left: 20px; }
+            .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task > .ks-header > .ks-progress > .progress {
+              margin: 0;
+              width: 100px; }
+          .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task > .ks-header > .ks-control {
+            margin-left: 20px;
+            width: 40px; }
+            .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task > .ks-header > .ks-control > .ks-icon {
+              font-size: 17px;
+              line-height: 17px;
+              display: inline-block;
+              margin-right: 2px;
+              color: #8997c3;
+              position: relative;
+              top: 1px; }
+              .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task > .ks-header > .ks-control > .ks-icon:hover {
+                color: #25628F; }
+            .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task > .ks-header > .ks-control > .ks-amount {
+              font-size: 12px;
+              line-height: 12px; }
+          .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task > .ks-header > .ks-datetime {
+            margin-left: 30px;
+            font-size: 12px;
+            width: 70px; }
+            .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task > .ks-header > .ks-datetime > .ks-icon {
+              font-size: 17px;
+              display: inline-block;
+              margin-right: 5px; }
+          .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task > .ks-header > .ks-users {
+            width: 50px;
+            font-size: 10px;
+            font-weight: 500;
+            margin-left: 20px; }
+            .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task > .ks-header > .ks-users > .ks-image {
+              display: inline-block;
+              margin-right: 4px; }
+          .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task > .ks-header > .ks-controls {
+            margin-left: 20px; }
+            .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task > .ks-header > .ks-controls > .btn {
+              padding: 7px 0;
+              color: #25628F;
+              font-size: 20px; }
+        .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task.ks-completed > .ks-header > .ks-name {
+          text-decoration: line-through; }
+        .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task.ks-opened > .ks-body {
+          border-top: 1px solid #dee0e1; }
+          .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task.ks-opened > .ks-body > .ks-description {
+            padding: 15px 50px; }
+          .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task.ks-opened > .ks-body > .ks-subtasks-and-controls {
+            border-top: 1px solid #dee0e1;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            -js-display: flex;
+            display: flex; }
+            .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task.ks-opened > .ks-body > .ks-subtasks-and-controls > .ks-subtasks {
+              width: 50%;
+              padding: 10px 30px 20px 30px; }
+              .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task.ks-opened > .ks-body > .ks-subtasks-and-controls > .ks-subtasks + .ks-start-stop {
+                border-left: 1px solid #dee0e1; }
+              .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task.ks-opened > .ks-body > .ks-subtasks-and-controls > .ks-subtasks > .ks-subtask-create {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                -js-display: flex;
+                display: flex;
+                -webkit-box-align: center;
+                -webkit-align-items: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                margin-bottom: 12px; }
+                .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task.ks-opened > .ks-body > .ks-subtasks-and-controls > .ks-subtasks > .ks-subtask-create > .ks-icon {
+                  font-size: 16px;
+                  font-weight: normal;
+                  color: #c4cbe1;
+                  margin-right: 12px;
+                  margin-left: 29px; }
+                .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task.ks-opened > .ks-body > .ks-subtasks-and-controls > .ks-subtasks > .ks-subtask-create > .form-control {
+                  padding: 0;
+                  font-size: 12px;
+                  color: #858585;
+                  -webkit-box-flex: 1;
+                  -webkit-flex-grow: 1;
+                      -ms-flex-positive: 1;
+                          flex-grow: 1;
+                  border: none; }
+                  .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task.ks-opened > .ks-body > .ks-subtasks-and-controls > .ks-subtasks > .ks-subtask-create > .form-control::-webkit-input-placeholder {
+                    font-size: 12px;
+                    color: #858585; }
+                  .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task.ks-opened > .ks-body > .ks-subtasks-and-controls > .ks-subtasks > .ks-subtask-create > .form-control::-moz-placeholder {
+                    font-size: 12px;
+                    color: #858585; }
+                  .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task.ks-opened > .ks-body > .ks-subtasks-and-controls > .ks-subtasks > .ks-subtask-create > .form-control:-ms-input-placeholder {
+                    font-size: 12px;
+                    color: #858585; }
+                  .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task.ks-opened > .ks-body > .ks-subtasks-and-controls > .ks-subtasks > .ks-subtask-create > .form-control::placeholder {
+                    font-size: 12px;
+                    color: #858585; }
+              .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task.ks-opened > .ks-body > .ks-subtasks-and-controls > .ks-subtasks > ul {
+                list-style: none;
+                padding: 0;
+                margin: 0; }
+                .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task.ks-opened > .ks-body > .ks-subtasks-and-controls > .ks-subtasks > ul > .ks-subtask {
+                  font-size: 12px;
+                  margin-bottom: 12px;
+                  display: -webkit-box;
+                  display: -webkit-flex;
+                  display: -ms-flexbox;
+                  -js-display: flex;
+                  display: flex;
+                  -webkit-box-align: center;
+                  -webkit-align-items: center;
+                      -ms-flex-align: center;
+                          align-items: center; }
+                  .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task.ks-opened > .ks-body > .ks-subtasks-and-controls > .ks-subtasks > ul > .ks-subtask:last-child {
+                    margin-bottom: 0; }
+                  .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task.ks-opened > .ks-body > .ks-subtasks-and-controls > .ks-subtasks > ul > .ks-subtask > .ks-icon {
+                    font-size: 18px;
+                    color: #d8dceb;
+                    line-height: 12px;
+                    margin-right: 15px;
+                    cursor: pointer; }
+                  .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task.ks-opened > .ks-body > .ks-subtasks-and-controls > .ks-subtasks > ul > .ks-subtask > .custom-control {
+                    margin: 0; }
+                  .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task.ks-opened > .ks-body > .ks-subtasks-and-controls > .ks-subtasks > ul > .ks-subtask.ks-completed .custom-control-description {
+                    text-decoration: line-through; }
+            .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task.ks-opened > .ks-body > .ks-subtasks-and-controls > .ks-start-stop {
+              width: 50%;
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              -js-display: flex;
+              display: flex;
+              -webkit-box-align: center;
+              -webkit-align-items: center;
+                  -ms-flex-align: center;
+                      align-items: center;
+              -webkit-box-pack: center;
+              -webkit-justify-content: center;
+                  -ms-flex-pack: center;
+                      justify-content: center;
+              font-size: 14px; }
+              .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task.ks-opened > .ks-body > .ks-subtasks-and-controls > .ks-start-stop > .ks-icon {
+                font-size: 22px;
+                color: #25628F;
+                margin-right: 20px;
+                cursor: pointer; }
+          .ks-project-tasks-page > .ks-body > .ks-tasks-board .ks-wrapper > .ks-task.ks-opened > .ks-body > .ks-comments-section {
+            border-top: 1px solid #dee0e1;
+            margin-bottom: 0; }
+
+@media screen and (max-width: 990px) {
+  .btn.ks-navigation-block-toggle {
+    position: static; }
+  .ks-project-tasks-page > .ks-body > .ks-navigation {
+    position: fixed;
+    left: -250px;
+    z-index: 4;
+    top: 120px;
+    height: 100%; }
+    .ks-project-tasks-page > .ks-body > .ks-navigation.ks-open {
+      left: 0;
+      -webkit-transition: left .2s ease;
+      transition: left .2s ease; } }
+
+@media screen and (max-width: 790px) {
+  .ks-project-tasks-page > .ks-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px;
+    height: auto; }
+    .ks-project-tasks-page > .ks-header > .ks-project {
+      margin-bottom: 15px; }
+  .ks-project-tasks-page > .ks-body > .ks-tasks-board .card.ks-task > .ks-header {
+    height: auto;
+    padding: 15px;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; } }
+
+@media screen and (max-width: 650px) {
+  .ks-project-tasks-page > .ks-header > .ks-extras {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .ks-project-tasks-page > .ks-header > .ks-extras > .ks-search {
+      margin-bottom: 15px; }
+    .ks-project-tasks-page > .ks-header > .ks-extras > .ks-users {
+      margin-left: 0; } }

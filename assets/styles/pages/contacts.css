@@ -1,0 +1,132 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Container / .ks-contacts-page
+2. Map / .ks-contacts-page > .ks-map
+1. Contact form / .ks-contacts-page > .ks-contacts
+-------------------------------------------------------------------*/
+.ks-contacts-page {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  height: 100%; }
+  .ks-contacts-page .ks-map {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    height: 100%;
+    background: #e0e0e0;
+    position: relative; }
+    .ks-contacts-page .ks-map #ks-map {
+      width: 100%;
+      height: 100%; }
+    .ks-contacts-page .ks-map .ks-locations {
+      position: absolute;
+      bottom: 60px;
+      left: -webkit-calc(50% - 231px);
+      left: calc(50% - 231px);
+      width: 462px;
+      height: 60px;
+      -webkit-border-radius: 2px;
+              border-radius: 2px;
+      background-color: #ffffff;
+      -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+              box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      -js-display: flex;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      padding-left: 20px;
+      padding-right: 20px; }
+      .ks-contacts-page .ks-map .ks-locations .ks-location {
+        height: 60px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        -js-display: flex;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        color: #333333;
+        font-size: 14px;
+        text-decoration: none;
+        width: 121px;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        position: relative; }
+        .ks-contacts-page .ks-map .ks-locations .ks-location:before {
+          content: '';
+          height: 4px;
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          left: 0; }
+        .ks-contacts-page .ks-map .ks-locations .ks-location:hover:before {
+          background-color: #bbdffb; }
+        .ks-contacts-page .ks-map .ks-locations .ks-location.ks-active {
+          font-weight: 500; }
+          .ks-contacts-page .ks-map .ks-locations .ks-location.ks-active:before {
+            background-color: #42a5f5; }
+  .ks-contacts-page .ks-contacts {
+    border-left: 1px solid rgba(57, 80, 155, 0.2);
+    width: 295px;
+    background-color: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .ks-contacts-page .ks-contacts > .ks-box {
+      padding: 30px; }
+    .ks-contacts-page .ks-contacts > .ks-connect {
+      border-bottom: 1px solid rgba(57, 80, 155, 0.2); }
+      .ks-contacts-page .ks-contacts > .ks-connect .btn {
+        margin-right: 6px; }
+        .ks-contacts-page .ks-contacts > .ks-connect .btn:last-child {
+          margin-right: 0; }
+    .ks-contacts-page .ks-contacts .ks-contact-form {
+      border-bottom: 1px solid rgba(57, 80, 155, 0.2);
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1; }
+      .ks-contacts-page .ks-contacts .ks-contact-form textarea {
+        height: 175px;
+        resize: none; }
+
+@media screen and (max-width: 980px) {
+  .btn.ks-contact-form-block-toggle {
+    position: static; }
+  .ks-contacts-page .ks-contacts {
+    position: fixed;
+    top: 120px;
+    bottom: 0;
+    right: -296px;
+    z-index: 3;
+    height: 100%; }
+    .ks-contacts-page .ks-contacts.ks-open {
+      right: 0;
+      -webkit-transition: right .2s ease;
+      transition: right .2s ease; } }

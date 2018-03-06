@@ -1,0 +1,26 @@
+.breadcrumb.ks-default {
+  padding: 0;
+  margin: 0;
+  background: none;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  border: solid 1px #dee0e1; }
+  .breadcrumb.ks-default > .breadcrumb-item {
+    font-size: 12px;
+    padding: 5px 15px;
+    font-weight: normal;
+    color: #858585; }
+    .breadcrumb.ks-default > .breadcrumb-item:before, .breadcrumb.ks-default > .breadcrumb-item:after {
+      display: none; }
+    .breadcrumb.ks-default > .breadcrumb-item.active {
+      color: rgba(133, 133, 133, 0.6); }
+    .breadcrumb.ks-default > .breadcrumb-item + .breadcrumb-item {
+      border-left: 1px solid #dee0e1; }
+  .breadcrumb.ks-default > .ks-breadcrumb-icon {
+    padding: 5px 6px; }
+    .breadcrumb.ks-default > .ks-breadcrumb-icon > .ks-icon {
+      font-size: 16px;
+      line-height: 14px;
+      color: #858585;
+      position: relative;
+      top: 2px; }

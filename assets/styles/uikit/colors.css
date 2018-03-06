@@ -1,0 +1,246 @@
+.ks-color-preview {
+  height: 100px;
+  color: #fff; }
+  .ks-color-preview-default, .ks-color-preview-active {
+    height: 50px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .ks-color-preview-default {
+    -webkit-border-top-left-radius: 2px;
+            border-top-left-radius: 2px;
+    -webkit-border-top-right-radius: 2px;
+            border-top-right-radius: 2px; }
+  .ks-color-preview-active {
+    -webkit-border-bottom-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+    -webkit-border-bottom-right-radius: 2px;
+            border-bottom-right-radius: 2px; }
+
+.ks-color-preview-primary .ks-color-preview-default {
+  background: #25628F; }
+
+.ks-color-preview-primary .ks-color-preview-active {
+  background: #1d4c6f; }
+
+.ks-color-preview-info .ks-color-preview-default {
+  background: #42a5f5; }
+
+.ks-color-preview-info .ks-color-preview-active {
+  background: #1e88e5; }
+
+.ks-color-preview-success .ks-color-preview-default {
+  background: #4caf50; }
+
+.ks-color-preview-success .ks-color-preview-active {
+  background: #388e3c; }
+
+.ks-color-preview-warning .ks-color-preview-default {
+  background: #ffb300; }
+
+.ks-color-preview-warning .ks-color-preview-active {
+  background: #ff8f00; }
+
+.ks-color-preview-danger .ks-color-preview-default {
+  background: #ef5350; }
+
+.ks-color-preview-danger .ks-color-preview-active {
+  background: #e53935; }
+
+.ks-color-preview-secondary {
+  color: #333; }
+  .ks-color-preview-secondary .ks-color-preview-default {
+    background: #ebebeb; }
+  .ks-color-preview-secondary .ks-color-preview-active {
+    background: #d7d7d7; }
+
+.ks-color-preview-cinnabar .ks-color-preview-default {
+  background: #e74c3c; }
+
+.ks-color-preview-cinnabar .ks-color-preview-active {
+  background: #dc3125; }
+
+.ks-color-preview-zest .ks-color-preview-default {
+  background: #e67e22; }
+
+.ks-color-preview-zest .ks-color-preview-active {
+  background: #da5e13; }
+
+.ks-color-preview-supernova .ks-color-preview-default {
+  background: #ffcd02; }
+
+.ks-color-preview-supernova .ks-color-preview-active {
+  background: #ffb901; }
+
+.ks-color-preview-pavlova .ks-color-preview-default {
+  background: #d5c295; }
+
+.ks-color-preview-pavlova .ks-color-preview-active {
+  background: #c3ab76; }
+
+.ks-color-preview-pickled-bluewood .ks-color-preview-default {
+  background: #34495e; }
+
+.ks-color-preview-pickled-bluewood .ks-color-preview-active {
+  background: #1f2f40; }
+
+.ks-color-preview-mine-shaft .ks-color-preview-default {
+  background: #2b2b2b; }
+
+.ks-color-preview-mine-shaft .ks-color-preview-active {
+  background: #191919; }
+
+.ks-color-preview-wisteria .ks-color-preview-default {
+  background: #9b59b6; }
+
+.ks-color-preview-wisteria .ks-color-preview-active {
+  background: #7c3c9c; }
+
+.ks-color-preview-ming .ks-color-preview-default {
+  background: #3a6f81; }
+
+.ks-color-preview-ming .ks-color-preview-active {
+  background: #1f2f40; }
+
+.ks-color-preview-curious-blue .ks-color-preview-default {
+  background: #3498db; }
+
+.ks-color-preview-curious-blue .ks-color-preview-active {
+  background: #1f79cb; }
+
+.ks-color-preview-shamrock .ks-color-preview-default {
+  background: #2ecc71; }
+
+.ks-color-preview-shamrock .ks-color-preview-active {
+  background: #1bb751; }
+
+.ks-color-preview-mountain-meadow .ks-color-preview-default {
+  background: #1abc9c; }
+
+.ks-color-preview-mountain-meadow .ks-color-preview-active {
+  background: #0ea37d; }
+
+.ks-color-preview-porcelain {
+  color: #000; }
+  .ks-color-preview-porcelain .ks-color-preview-default {
+    background: #ecf0f1; }
+  .ks-color-preview-porcelain .ks-color-preview-active {
+    background: #e3e9ea; }
+
+.ks-color-preview-cascade .ks-color-preview-default {
+  background: #95a5a6; }
+
+.ks-color-preview-cascade .ks-color-preview-active {
+  background: #768889; }
+
+.ks-color-preview-killarney .ks-color-preview-default {
+  background: #345f41; }
+
+.ks-color-preview-killarney .ks-color-preview-active {
+  background: #1f4129; }
+
+.ks-color-preview-blue-marguerite .ks-color-preview-default {
+  background: #745ec5; }
+
+.ks-color-preview-blue-marguerite .ks-color-preview-active {
+  background: #5440ae; }
+
+.ks-color-preview-millbrook .ks-color-preview-default {
+  background: #5e4534; }
+
+.ks-color-preview-millbrook .ks-color-preview-active {
+  background: #402c1f; }
+
+.ks-color-preview-cosmic .ks-color-preview-default {
+  background: #5e345e; }
+
+.ks-color-preview-cosmic .ks-color-preview-active {
+  background: #401f40; }
+
+.ks-color-preview-flory .ks-color-preview-default {
+  background: #ef717a; }
+
+.ks-color-preview-flory .ks-color-preview-active {
+  background: #e7515a; }
+
+.ks-color-preview-atlantis .ks-color-preview-default {
+  background: #a5c63b; }
+
+.ks-color-preview-atlantis .ks-color-preview-active {
+  background: #88b024; }
+
+.ks-color-preview-persian-pink .ks-color-preview-default {
+  background: #f47cc3; }
+
+.ks-color-preview-persian-pink .ks-color-preview-active {
+  background: #ee5cac; }
+
+.ks-color-preview-nutmeg .ks-color-preview-default {
+  background: #79302a; }
+
+.ks-color-preview-nutmeg .ks-color-preview-active {
+  background: #591c18; }
+
+.ks-color-preview-donkey-brown .ks-color-preview-default {
+  background: #a38671; }
+
+.ks-color-preview-donkey-brown .ks-color-preview-active {
+  background: #856651; }
+
+.ks-color-preview-perano .ks-color-preview-default {
+  background: #b8c9f1; }
+
+.ks-color-preview-perano .ks-color-preview-active {
+  background: #9eb3ea; }
+
+.ks-color-preview-kashmir-blue .ks-color-preview-default {
+  background: #5065a1; }
+
+.ks-color-preview-kashmir-blue .ks-color-preview-active {
+  background: #344683; }
+
+.ks-color-preview-dark-tan .ks-color-preview-default {
+  background: #630a10; }
+
+.ks-color-preview-dark-tan .ks-color-preview-active {
+  background: #42060f; }
+
+.ks-color-preview-persian-green .ks-color-preview-default {
+  background: #02a388; }
+
+.ks-color-preview-persian-green .ks-color-preview-active {
+  background: #006758; }
+
+.ks-color-preview-royal-blue .ks-color-preview-default {
+  background: #4160de; }
+
+.ks-color-preview-royal-blue .ks-color-preview-active {
+  background: #2a4085; }
+
+.ks-color-preview-crusta .ks-color-preview-default {
+  background: #e79716; }
+
+.ks-color-preview-crusta .ks-color-preview-active {
+  background: #f96800; }
+
+.ks-color-preview-medium-purple .ks-color-preview-default {
+  background: #9043d8; }
+
+.ks-color-preview-medium-purple .ks-color-preview-active {
+  background: #5b2e81; }
+
+.ks-color-preview-cerise-red .ks-color-preview-default {
+  background: #e23e57; }
+
+.ks-color-preview-cerise-red .ks-color-preview-active {
+  background: #882535; }

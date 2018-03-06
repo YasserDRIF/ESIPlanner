@@ -1,0 +1,31 @@
+.jconfirm.jconfirm-white .jconfirm-box, .jconfirm.jconfirm-light .jconfirm-box {
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  padding: 15px 20px 0 20px; }
+  .jconfirm.jconfirm-white .jconfirm-box .jconfirm-buttons button, .jconfirm.jconfirm-light .jconfirm-box .jconfirm-buttons button {
+    -webkit-border-radius: 2px;
+            border-radius: 2px;
+    font-size: 12px;
+    padding: 11px 15px; }
+    .jconfirm.jconfirm-white .jconfirm-box .jconfirm-buttons button + .btn, .jconfirm.jconfirm-light .jconfirm-box .jconfirm-buttons button + .btn {
+      margin-left: 10px; }
+
+.jconfirm .jconfirm-box div.jconfirm-closeIcon {
+  top: 10px; }
+
+.jconfirm .jconfirm-box.jconfirm-type-primary {
+  border-top: solid 7px #25628F; }
+
+.jconfirm .jconfirm-box.jconfirm-type-success {
+  border-top: solid 7px #4caf50; }
+
+.jconfirm .jconfirm-box.jconfirm-type-info {
+  border-top: solid 7px #42a5f5; }
+
+.jconfirm .jconfirm-box.jconfirm-type-warning {
+  border-top: solid 7px #ffb300; }
+
+.jconfirm .jconfirm-box.jconfirm-type-danger {
+  border-top: solid 7px #ef5350;
+  -webkit-animation-name: type-red;
+          animation-name: type-red; }

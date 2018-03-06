@@ -1,0 +1,25 @@
+.ks-area-chart .ks-grid .tick {
+  stroke: lightgrey;
+  stroke-opacity: 0.7;
+  shape-rendering: crispEdges; }
+
+.ks-area-chart .ks-grid path {
+  stroke-width: 0; }
+
+.ks-area-chart.ks-theme-primary .ks-line {
+  stroke-width: 1px;
+  stroke: rgba(57, 81, 155, 0.3);
+  fill: none; }
+
+.ks-area-chart.ks-theme-primary .ks-area {
+  fill: rgba(57, 80, 155, 0.1);
+  stroke-width: 0; }
+
+.ks-area-chart.ks-theme-purple .ks-line {
+  stroke-width: 1px;
+  stroke: rgba(203, 72, 186, 0.3);
+  fill: none; }
+
+.ks-area-chart.ks-theme-purple .ks-area {
+  fill: rgba(203, 72, 186, 0.2);
+  stroke-width: 0; }

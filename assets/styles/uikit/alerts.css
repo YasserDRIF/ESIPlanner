@@ -1,0 +1,170 @@
+/* BEGIN UIKIT ALERTS */
+.alert {
+  padding: 17px 20px;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  background: #ffffff;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+  font-weight: normal;
+  color: #333;
+  position: relative; }
+  .alert > ul {
+    margin: 0;
+    padding-left: 30px; }
+  .alert > .ks-icon {
+    font-size: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    top: 3px; }
+  .alert > .close {
+    position: relative;
+    top: -8px;
+    right: -8px;
+    text-shadow: none; }
+    .alert > .close > span {
+      font-size: 16px;
+      font-weight: bold; }
+  .alert > .ks-actions .btn + .btn {
+    margin-left: 10px; }
+  .alert > .ks-inline-image-block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .alert > .ks-inline-image-block > .ks-image {
+      margin-right: 15px; }
+  .alert > .alert-heading {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333333;
+    margin-bottom: 10px;
+    margin-top: 0; }
+  .alert > .ks-image-block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex; }
+    .alert > .ks-image-block > .ks-image {
+      width: 36px;
+      height: 36px;
+      margin-right: 10px; }
+    .alert > .ks-image-block > .ks-info > .ks-name {
+      font-weight: 500;
+      display: block;
+      margin-bottom: 3px; }
+    .alert > .ks-image-block > .ks-info > .ks-text {
+      color: rgba(51, 51, 51, 0.8);
+      display: block; }
+  .alert::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 4px;
+    left: -1px;
+    top: -1px;
+    bottom: -1px;
+    background: transparent;
+    -webkit-border-top-left-radius: 2px;
+            border-top-left-radius: 2px;
+    -webkit-border-bottom-left-radius: 2px;
+            border-bottom-left-radius: 2px; }
+  .alert.ks-solid {
+    border: none;
+    color: #fff; }
+    .alert.ks-solid::before {
+      left: 0;
+      top: 0;
+      bottom: 0; }
+    .alert.ks-solid > .alert-heading {
+      color: #fff; }
+    .alert.ks-solid > .close {
+      opacity: .5; }
+      .alert.ks-solid > .close:hover {
+        opacity: .9; }
+      .alert.ks-solid > .close > span {
+        color: #fff; }
+    .alert.ks-solid > .ks-image-block > .ks-info > .ks-text {
+      color: #fff; }
+    .alert.ks-solid > .ks-actions > .ks-cancel {
+      color: #fff;
+      background: transparent;
+      border: solid 1px rgba(255, 255, 255, 0.2); }
+  .alert.ks-solid-light > .ks-actions > .ks-cancel {
+    background: transparent; }
+  .alert.ks-active-border::before {
+    background: #e5e5e5; }
+  .alert.alert-primary {
+    border-color: #d0d4e7; }
+    .alert.alert-primary.ks-active-border::before {
+      background: #d0d4e7; }
+    .alert.alert-primary.ks-solid {
+      background: #25628F; }
+      .alert.alert-primary.ks-solid.ks-active-border::before {
+        background: #18415e; }
+      .alert.alert-primary.ks-solid > .ks-actions > .ks-approve {
+        background: #18415e;
+        border-color: #18415e; }
+    .alert.alert-primary.ks-solid-light {
+      background: #f5f6fa; }
+  .alert.alert-danger {
+    border-color: #fbe0db; }
+    .alert.alert-danger.ks-active-border::before {
+      background: #fbe0db; }
+    .alert.alert-danger.ks-solid {
+      background: #ef5350; }
+      .alert.alert-danger.ks-solid.ks-active-border::before {
+        background: #e53935; }
+      .alert.alert-danger.ks-solid > .ks-actions > .ks-approve {
+        background: #e53935;
+        border-color: #e53935; }
+    .alert.alert-danger.ks-solid-light {
+      background: #fdefed; }
+  .alert.alert-info {
+    border-color: #d3edfc; }
+    .alert.alert-info.ks-active-border::before {
+      background: #d3edfc; }
+    .alert.alert-info.ks-solid {
+      background: #42a5f5; }
+      .alert.alert-info.ks-solid.ks-active-border::before {
+        background: #1e88e5; }
+      .alert.alert-info.ks-solid > .ks-actions > .ks-approve {
+        background: #1e88e5;
+        border-color: #1e88e5; }
+    .alert.alert-info.ks-solid-light {
+      background: #e8f6fd; }
+  .alert.alert-success {
+    border-color: #c0f0d4; }
+    .alert.alert-success.ks-active-border::before {
+      background: #c0f0d4; }
+    .alert.alert-success.ks-solid {
+      background: #4caf50; }
+      .alert.alert-success.ks-solid.ks-active-border::before {
+        background: #388e3c; }
+      .alert.alert-success.ks-solid > .ks-actions > .ks-approve {
+        background: #388e3c;
+        border-color: #388e3c; }
+    .alert.alert-success.ks-solid-light {
+      background: #eaf9f0; }
+  .alert.alert-warning {
+    border-color: #f5ebb6; }
+    .alert.alert-warning.ks-active-border::before {
+      background: #f5ebb6; }
+    .alert.alert-warning.ks-solid {
+      background: #ffb300; }
+      .alert.alert-warning.ks-solid.ks-active-border::before {
+        background: #ff8f00; }
+      .alert.alert-warning.ks-solid > .ks-actions > .ks-approve {
+        background: #ff8f00;
+        border-color: #ff8f00; }
+    .alert.alert-warning.ks-solid-light {
+      background: #fbf8e6; }
+
+/* END UIKIT ALERTS */

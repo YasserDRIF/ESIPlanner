@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'kosmo';
+  src:
+    url('fonts/kosmo.ttf?gozpnc') format('truetype'),
+    url('fonts/kosmo.woff?gozpnc') format('woff'),
+    url('fonts/kosmo.svg?gozpnc#kosmo') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="ks-icon-"], [class*=" ks-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'kosmo' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ks-icon-circled-down-left:before {
+  content: "\e900";
+}
+.ks-icon-circled-right:before {
+  content: "\e901";
+}
+.ks-icon-circled-up-right:before {
+  content: "\e902";
+}
+.ks-icon-combo-chart:before {
+  content: "\e903";
+}
+.ks-icon-downpour:before {
+  content: "\e904";
+}
+.ks-icon-flash-on:before {
+  content: "\e905";
+}
+.ks-icon-heavy-rain:before {
+  content: "\e906";
+}
+.ks-icon-light-snow:before {
+  content: "\e907";
+}
+.ks-icon-partly-cloudy-day:before {
+  content: "\e908";
+}
+.ks-icon-partly-cloudy-rain:before {
+  content: "\e909";
+}
+.ks-icon-plus:before {
+  content: "\e90a";
+}
+.ks-icon-sleet:before {
+  content: "\e90b";
+}
+.ks-icon-snow:before {
+  content: "\e90c";
+}
+.ks-icon-storm:before {
+  content: "\e90d";
+}
+.ks-icon-user:before {
+  content: "\e90e";
+}
+

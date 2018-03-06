@@ -1,0 +1,150 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Container / .ks-project-task-page
+2. Task info / .ks-project-task-page .ks-task-information
+3. Task common info / .ks-project-task-page .ks-task-common-block
+4. Task tabs / .ks-project-task-page .ks-task-tabs
+5. Task details / .ks-project-task-page .ks-task-details
+-------------------------------------------------------------------*/
+.ks-project-task-page {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  width: 100%;
+  height: 100%; }
+  .ks-project-task-page > .ks-task-information {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+    .ks-project-task-page > .ks-task-information .ks-wrapper {
+      padding: 30px; }
+      .ks-project-task-page > .ks-task-information .ks-wrapper > .ks-task-common-block {
+        padding: 30px;
+        margin-bottom: 30px; }
+        .ks-project-task-page > .ks-task-information .ks-wrapper > .ks-task-common-block > .ks-header {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          -js-display: flex;
+          display: flex;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center; }
+          .ks-project-task-page > .ks-task-information .ks-wrapper > .ks-task-common-block > .ks-header > .ks-name {
+            -webkit-box-flex: 1;
+            -webkit-flex-grow: 1;
+                -ms-flex-positive: 1;
+                    flex-grow: 1;
+            font-size: 18px;
+            line-height: 18px;
+            font-weight: 500;
+            color: #333; }
+            .ks-project-task-page > .ks-task-information .ks-wrapper > .ks-task-common-block > .ks-header > .ks-name > .badge {
+              position: relative;
+              top: -1px;
+              margin-left: 5px; }
+          .ks-project-task-page > .ks-task-information .ks-wrapper > .ks-task-common-block > .ks-header > .ks-progress {
+            margin-left: 20px; }
+            .ks-project-task-page > .ks-task-information .ks-wrapper > .ks-task-common-block > .ks-header > .ks-progress > .progress {
+              margin: 0;
+              width: 100px; }
+          .ks-project-task-page > .ks-task-information .ks-wrapper > .ks-task-common-block > .ks-header > .ks-datetime {
+            margin-left: 30px;
+            font-size: 12px;
+            width: 60px; }
+            .ks-project-task-page > .ks-task-information .ks-wrapper > .ks-task-common-block > .ks-header > .ks-datetime > .ks-icon {
+              font-size: 14px;
+              display: inline-block;
+              margin-right: 5px; }
+          .ks-project-task-page > .ks-task-information .ks-wrapper > .ks-task-common-block > .ks-header > .ks-users {
+            font-size: 10px;
+            font-weight: 500;
+            margin-left: 20px; }
+            .ks-project-task-page > .ks-task-information .ks-wrapper > .ks-task-common-block > .ks-header > .ks-users > .ks-image {
+              display: inline-block;
+              margin-right: 4px; }
+        .ks-project-task-page > .ks-task-information .ks-wrapper > .ks-task-common-block > .ks-project {
+          font-size: 12px;
+          color: #858585;
+          margin-top: 5px;
+          margin-bottom: 25px;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          -js-display: flex;
+          display: flex;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center; }
+          .ks-project-task-page > .ks-task-information .ks-wrapper > .ks-task-common-block > .ks-project > .ks-avatar {
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            margin: 0 7px; }
+        .ks-project-task-page > .ks-task-information .ks-wrapper > .ks-task-common-block > .card-block {
+          padding: 0; }
+          .ks-project-task-page > .ks-task-information .ks-wrapper > .ks-task-common-block > .card-block > .ks-controls > .ks-start-button {
+            margin-right: 10px; }
+      .ks-project-task-page > .ks-task-information .ks-wrapper > .ks-task-tabs {
+        margin-top: 30px; }
+        .ks-project-task-page > .ks-task-information .ks-wrapper > .ks-task-tabs .ks-comments-section {
+          padding: 0;
+          margin: 0; }
+  .ks-project-task-page > .ks-task-details {
+    width: 320px;
+    min-width: 320px;
+    border-left: 1px solid #dee0e1;
+    background: #fff; }
+    .ks-project-task-page > .ks-task-details .ks-wrapper {
+      padding: 30px; }
+      .ks-project-task-page > .ks-task-details .ks-wrapper > .ks-collapse-block > .nav-item > .nav-link {
+        padding: 0; }
+
+@media screen and (max-width: 990px) {
+  .btn.ks-task-details-block-toggle {
+    position: static; }
+  .ks-project-task-page > .ks-task-details {
+    width: 280px;
+    min-width: 280px;
+    position: fixed;
+    top: 120px;
+    bottom: 0;
+    right: -280px;
+    z-index: 2;
+    height: -webkit-calc(100% - 120px);
+    height: calc(100% - 120px); }
+    .ks-project-task-page > .ks-task-details.ks-open {
+      right: 0;
+      -webkit-transition: right .2s ease;
+      transition: right .2s ease; } }
+
+@media screen and (max-width: 700px) {
+  .ks-project-task-page > .ks-task-information .ks-wrapper > .ks-tabs-container .ks-nav-tabs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .ks-project-task-page > .ks-task-information .ks-wrapper > .ks-task-common-block > .ks-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+    .ks-project-task-page > .ks-task-information .ks-wrapper > .ks-task-common-block > .ks-header > .ks-progress, .ks-project-task-page > .ks-task-information .ks-wrapper > .ks-task-common-block > .ks-header > .ks-datetime, .ks-project-task-page > .ks-task-information .ks-wrapper > .ks-task-common-block > .ks-header > .ks-users {
+      margin-left: 0;
+      margin-bottom: 5px; } }

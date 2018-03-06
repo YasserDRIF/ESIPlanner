@@ -1,0 +1,38 @@
+.ks-billing .ks-body-wrap-container {
+  margin: 30px 15px; }
+
+.ks-billing .ks-col-info .ks-plan-details td {
+  vertical-align: top; }
+
+.ks-billing .ks-col-info .ks-plan-details .ks-amount {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: bold;
+  margin-bottom: 10px; }
+
+.ks-billing .ks-col-info .ks-plan-details .ks-plan {
+  font-size: 12px;
+  margin-bottom: 30px; }
+  .ks-billing .ks-col-info .ks-plan-details .ks-plan > .ks-datetime {
+    margin-top: 2px;
+    color: #858585; }
+
+.ks-billing .ks-col-info .ks-plan-details .ks-description {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+  .ks-billing .ks-col-info .ks-plan-details .ks-description li {
+    margin-bottom: 5px;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase; }
+
+.ks-billing .ks-col-info .ks-billing-details tr td, .ks-billing .ks-col-info .ks-payment-details tr td {
+  padding-bottom: 10px; }
+
+.ks-billing .ks-col-info .ks-billing-details tr td:first-child, .ks-billing .ks-col-info .ks-payment-details tr td:first-child {
+  color: #858585;
+  width: 110px; }
+
+.ks-billing .ks-col-info .ks-billing-details tr:last-child td, .ks-billing .ks-col-info .ks-payment-details tr:last-child td {
+  padding-bottom: 0; }

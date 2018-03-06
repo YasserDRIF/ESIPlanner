@@ -1,0 +1,92 @@
+.note-popover {
+  display: none; }
+
+.note-btn-group .dropdown-toggle {
+  padding-right: 32px !important; }
+
+.note-btn-group .note-btn {
+  padding: 7px 15px;
+  height: 32px; }
+  .note-btn-group .note-btn .note-icon-caret {
+    display: none; }
+  .note-btn-group .note-btn + .dropdown-toggle {
+    padding-right: 26px !important; }
+
+.note-color .dropdown-menu {
+  padding-top: 1px;
+  padding-bottom: 5px;
+  padding-left: 1px; }
+  .note-color .dropdown-menu .btn-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .note-color .dropdown-menu .btn-group .btn {
+      padding: 3px 6px !important;
+      -webkit-border-radius: 2px !important;
+              border-radius: 2px !important;
+      height: auto; }
+
+.note-align {
+  margin-bottom: 4px; }
+
+.note-list {
+  margin-left: 0 !important; }
+
+.note-editor .btn, .note-popover .btn {
+  border-color: #dee0e1; }
+
+.note-editor.note-frame {
+  border-color: #dee0e1; }
+
+.note-editor .note-btn-group:not(.note-color) .dropdown-menu li {
+  color: #474747;
+  padding: 10px 15px;
+  margin: 0;
+  border-bottom: 1px solid #c4cbe1; }
+  .note-editor .note-btn-group:not(.note-color) .dropdown-menu li:last-child {
+    border-bottom: none; }
+  .note-editor .note-btn-group:not(.note-color) .dropdown-menu li p, .note-editor .note-btn-group:not(.note-color) .dropdown-menu li a, .note-editor .note-btn-group:not(.note-color) .dropdown-menu li blockquote, .note-editor .note-btn-group:not(.note-color) .dropdown-menu li pre {
+    margin: 0;
+    color: #474747 !important; }
+
+.note-editor .note-style .dropdown-menu {
+  min-width: 190px !important; }
+
+.note-editor .modal .modal-header {
+  padding: 12px 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse; }
+  .note-editor .modal .modal-header h4 {
+    margin: 0 !important; }
+  .note-editor .modal .modal-header .close {
+    font-size: 20px; }
+
+.note-editor .modal .modal-footer {
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }

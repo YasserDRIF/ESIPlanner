@@ -1,0 +1,55 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Container / .ks-faq-container
+2. Header / .ks-faq-container > ks-header
+3. Questions and answers / .ks-faq-container > .ks-body > .ks-questions-container
+-------------------------------------------------------------------*/
+.ks-faq-container {
+  background: #fff; }
+  .ks-faq-container .ks-faq-header h3 {
+    margin-bottom: 5px; }
+  .ks-faq-container .ks-faq-header .ks-description {
+    font-size: 16px;
+    color: #333; }
+  .ks-faq-container .ks-faq-header .ks-search {
+    margin-top: 30px; }
+  .ks-faq-container .ks-faq-body h5 {
+    margin-top: 30px; }
+  .ks-faq-container .ks-faq-body .ks-questions-container {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .ks-faq-container .ks-faq-body .ks-questions-container li {
+      margin-bottom: 15px; }
+      .ks-faq-container .ks-faq-body .ks-questions-container li:last-child {
+        margin-bottom: 0; }
+    .ks-faq-container .ks-faq-body .ks-questions-container .ks-question-block {
+      display: block;
+      position: relative;
+      cursor: pointer; }
+      .ks-faq-container .ks-faq-body .ks-questions-container .ks-question-block::before {
+        content: "\f110";
+        border: none;
+        font-family: "LineAwesome";
+        width: auto;
+        height: auto;
+        float: left;
+        display: block;
+        padding: 0;
+        font-size: 14px;
+        font-weight: normal;
+        color: rgba(58, 82, 155, 0.3);
+        margin-right: 10px; }
+    .ks-faq-container .ks-faq-body .ks-questions-container .ks-answer-block {
+      -webkit-border-radius: 2px;
+              border-radius: 2px;
+      background-color: rgba(57, 81, 155, 0.05);
+      padding: 20px;
+      margin-top: 10px;
+      display: none; }
+    .ks-faq-container .ks-faq-body .ks-questions-container .ks-opened .ks-answer-block {
+      display: block; }
+
+body:not(.ks-theme-white) .ks-faq-container {
+  margin: 30px 15px; }

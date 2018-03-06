@@ -1,0 +1,155 @@
+.ks-irs-slider-modern-warning .irs-line-mid,
+.ks-irs-slider-modern-warning .irs-line-left,
+.ks-irs-slider-modern-warning .irs-line-right,
+.ks-irs-slider-modern-warning .irs-bar,
+.ks-irs-slider-modern-warning .irs-bar-edge,
+.ks-irs-slider-modern-warning .irs-slider {
+  background: url(../img/sprite-skin-modern-warning.png) repeat-x; }
+
+.ks-irs-slider-modern-warning .irs {
+  height: 60px; }
+
+.ks-irs-slider-modern-warning .irs-with-grid {
+  height: 70px; }
+
+.ks-irs-slider-modern-warning .irs-line {
+  height: 5px;
+  top: 25px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background-color: #ebebeb; }
+
+.ks-irs-slider-modern-warning .irs-line-left {
+  height: 5px;
+  background-position: 0 -30px; }
+
+.ks-irs-slider-modern-warning .irs-line-mid {
+  height: 5px;
+  background-position: 0 0; }
+
+.ks-irs-slider-modern-warning .irs-line-right {
+  height: 5px;
+  background-position: 100% -30px; }
+
+.ks-irs-slider-modern-warning .irs-bar {
+  height: 5px;
+  top: 25px;
+  background-position: 0 -46px; }
+
+.ks-irs-slider-modern-warning .irs-bar-edge {
+  top: 20px;
+  height: 12px;
+  width: 6px;
+  background-position: 0 -64px; }
+
+.ks-irs-slider-modern-warning .irs-shadow {
+  height: 5px;
+  top: 25px;
+  background: #000;
+  opacity: 0.25; }
+
+.ks-irs-slider-modern-warning .lt-ie9 .irs-shadow {
+  filter: alpha(opacity=25); }
+
+.ks-irs-slider-modern-warning .irs-slider {
+  width: 12px;
+  height: 18px;
+  top: 33px;
+  background-position: 0 -94px;
+  cursor: pointer; }
+
+.ks-irs-slider-modern-warning .irs-slider.state_hover, .ks-irs-slider-modern-warning .irs-slider:hover {
+  background-position: 0 -127px; }
+
+.ks-irs-slider-modern-warning .irs-min, .ks-irs-slider-modern-warning .irs-max {
+  font-size: 10px;
+  padding: 0 5px;
+  font-weight: 500;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-style: normal;
+  font-stretch: normal;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  color: #858585;
+  text-shadow: none;
+  top: -4px;
+  height: 18px;
+  background: #ebebeb;
+  -webkit-border-radius: 2px;
+          border-radius: 2px; }
+
+.ks-irs-slider-modern-warning .irs-from, .ks-irs-slider-modern-warning .irs-to, .ks-irs-slider-modern-warning .irs-single {
+  text-shadow: none;
+  height: 20px;
+  padding: 0 5px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #ffb300;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  font-size: 11px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  color: #fff;
+  cursor: pointer;
+  top: -4px; }
+
+.ks-irs-slider-modern-warning .irs-from:after,
+.ks-irs-slider-modern-warning .irs-to:after,
+.ks-irs-slider-modern-warning .irs-single:after {
+  position: absolute;
+  display: block;
+  content: "";
+  bottom: -6px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -3px;
+  overflow: hidden;
+  border: 3px solid transparent;
+  border-top-color: #ffb300; }
+
+.ks-irs-slider-modern-warning .irs-grid {
+  height: 34px;
+  top: 42px; }
+
+.ks-irs-slider-modern-warning .irs-grid-pol {
+  background-color: #c4cbe1; }
+
+.ks-irs-slider-modern-warning .irs-grid-text {
+  bottom: 12px;
+  color: #858585; }
+
+.ks-irs-slider-modern-warning.ks-hide-controls .irs-min, .ks-irs-slider-modern-warning.ks-hide-controls .irs-max, .ks-irs-slider-modern-warning.ks-hide-controls .irs-from, .ks-irs-slider-modern-warning.ks-hide-controls .irs-to, .ks-irs-slider-modern-warning.ks-hide-controls .irs-grid-pol, .ks-irs-slider-modern-warning.ks-hide-controls .irs-single, .ks-irs-slider-modern-warning.ks-hide-controls .irs-with-grid {
+  display: none; }
+
+.ks-irs-slider-modern-warning.ks-hide-controls .irs {
+  height: 20px; }
+
+.ks-irs-slider-modern-warning.ks-hide-controls .irs-line, .ks-irs-slider-modern-warning.ks-hide-controls .irs-bar-edge, .ks-irs-slider-modern-warning.ks-hide-controls .irs-bar {
+  top: 11px; }
+
+.ks-irs-slider-modern-warning.ks-hide-controls .irs-slider {
+  top: 2px; }

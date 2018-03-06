@@ -1,0 +1,10 @@
+.ks-nav-body {
+  background: #fff; }
+  .ks-nav-body h1, .ks-nav-body h2, .ks-nav-body h3, .ks-nav-body h4, .ks-nav-body h5, .ks-nav-body h6 {
+    margin-top: 0; }
+  .ks-nav-body .ks-docs-image {
+    margin-top: 10px; }
+  .ks-nav-body ul li {
+    margin-bottom: 20px; }
+    .ks-nav-body ul li:last-child {
+      margin-bottom: 0; }
