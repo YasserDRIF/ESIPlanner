@@ -243,8 +243,8 @@ body {
   body.ks-page-header-fixed .ks-page-container .ks-page .ks-page-header {
     position: fixed;
     top: 60px;
-    width: -webkit-calc(100% - 260px);
-    width: calc(100% - 260px);
+    width: -webkit-calc(100%);
+    width: calc(100%);
     z-index: 2;
     /* Minimum: 2 */ }
   body.ks-page-header-fixed .ks-page-container .ks-page .ks-page-content .ks-page-content-body {

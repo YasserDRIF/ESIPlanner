@@ -1,19 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<!-- BEGIN HEAD -->
 <head>
-    <title>Basic usage</title>
-    <meta charset="utf-8">
-    <link href="styles/kendo.common.min.css" rel="stylesheet">
-    <link href="styles/kendo.default.min.css" rel="stylesheet">
-    <link href="styles/kendo.Fiori.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>ESI Planner</title>
 
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/kendo.all.min.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    <script src="js\cultures\kendo.culture.fr-FR.min.js"></script>
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
@@ -30,75 +24,27 @@
 
     <!-- BEGIN THEME STYLES -->
     <link rel="stylesheet" type="text/css" href="assets/styles/themes/primary.min.css">
-    <link class="ks-sidebar-dark-style" rel="stylesheet" type="text/css" href="assets/styles/themes/sidebar-black.min.css">
+    <link class="ks-sidebar-dark-style" rel="stylesheet" type="text/css"
+          href="assets/styles/themes/sidebar-black.min.css">
     <!-- END THEME STYLES -->
-
-
-
-
-
 </head>
-<body>
+<!-- END HEAD -->
+
+<body class="ks-navbar-fixed ks-sidebar-default ks-sidebar-position-fixed ks-page-header-fixed ks-theme-primary ks-page-loading">
+<!-- remove ks-page-header-fixed to unfix header -->
+
 <!-- BEGIN HEADER -->
 <nav class="navbar ks-navbar">
     <!-- BEGIN HEADER INNER -->
     <!-- BEGIN LOGO -->
     <div href="index.html" class="navbar-brand">
-        <!-- BEGIN RESPONSIVE SIDEBAR TOGGLER -->
-        <a href="#" class="ks-sidebar-toggle"><i class="ks-icon la la-bars" aria-hidden="true"></i></a>
-        <a href="#" class="ks-sidebar-mobile-toggle"><i class="ks-icon la la-bars" aria-hidden="true"></i></a>
-        <!-- END RESPONSIVE SIDEBAR TOGGLER -->
 
         <div class="ks-navbar-logo">
-            <a href="index.html" class="ks-logo">Kosmo</a>
-
-            <!-- BEGIN GRID NAVIGATION -->
-            <!--<span class="nav-item dropdown ks-dropdown-grid">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"></a>
-                <div class="dropdown-menu ks-info ks-scrollable" aria-labelledby="Preview" data-height="260">
-                    <div class="ks-scroll-wrapper">
-                        <a href="#" class="ks-grid-item">
-                            <span class="ks-icon la la-dashboard"></span>
-                            <span class="ks-text">Dashboard</span>
-                        </a>
-                        <a href="#" class="ks-grid-item">
-                            <span class="ks-icon la la-flask"></span>
-                            <span class="ks-text">Projects</span>
-                        </a>
-                        <a href="#" class="ks-grid-item">
-                            <span class="ks-icon la la-globe"></span>
-                            <span class="ks-text">Form</span>
-                        </a>
-                        <a href="#" class="ks-grid-item">
-                            <span class="ks-icon la la-calendar-o"></span>
-                            <span class="ks-text">Calendar</span>
-                        </a>
-                        <a href="#" class="ks-grid-item">
-                            <span class="ks-icon la la-ticket"></span>
-                            <span class="ks-text">Tickets</span>
-                        </a>
-                        <a href="#" class="ks-grid-item">
-                            <span class="ks-icon la la-dashboard"></span>
-                            <span class="ks-text">Profile</span>
-                        </a>
-                        <a href="#" class="ks-grid-item">
-                            <span class="ks-icon la la-dashboard"></span>
-                            <span class="ks-text">Documentation</span>
-                        </a>
-                        <a href="#" class="ks-grid-item">
-                            <span class="ks-icon la la-dashboard"></span>
-                            <span class="ks-text">FAQ</span>
-                        </a>
-                        <a href="#" class="ks-grid-item">
-                            <span class="ks-icon la la-dashboard"></span>
-                            <span class="ks-text">Components</span>
-                        </a>
-                    </div>
-                </div>
-            </span>-->
+            <a href="index.html" class="ks-logo">ESI Planner</a>
 
             <span class="nav-item dropdown ks-dropdown-grid-images">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                   aria-expanded="false"></a>
                 <div class="dropdown-menu ks-info ks-scrollable" aria-labelledby="Preview" data-height="260">
                     <div class="ks-scroll-wrapper">
                         <a href="#" class="ks-grid-item">
@@ -145,7 +91,7 @@
                     </a>
                     <div class="ks-wrapper">
                         <div class="input-icon icon-right icon icon-lg icon-color-primary">
-                            <input id="input-group-icon-text" type="text" class="form-control" placeholder="Search...">
+                            <input id="search-box" type="text" class="form-control" placeholder="Search...">
                             <span class="icon-addon">
                                 <span class="la la-search ks-icon"></span>
                             </span>
@@ -155,198 +101,38 @@
                         </a>
                     </div>
                 </form>
-                <a class="nav-item nav-link" href="#">Dashboard</a>
-                <div class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu ks-info" aria-labelledby="Preview">
-                        <a class="dropdown-item ks-active" href="#">Dropdown Link 1</a>
-                        <a class="dropdown-item" href="#">Dropdown Link 2</a>
-                        <a class="dropdown-item" href="#">Dropdown Link 3</a>
-                        <div class="dropdown-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="Preview">
-                                <a class="dropdown-item" href="#">Dropdown Link 1</a>
-                                <a class="dropdown-item" href="#">Dropdown Link 2</a>
-                                <a class="dropdown-item" href="#">Dropdown Link 3</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="nav-item nav-link ks-btn-action">
-                    <a class="btn btn-info" href="https://themeforest.net/item/kosmo-multi-purpose-responsive-bootstrap-4-admin-template-ui-framework/19506620?ref=themesanytime">Buy Now!</a>
-                </div>
+
             </div>
             <!-- END NAVBAR MENU -->
 
             <!-- BEGIN NAVBAR ACTIONS -->
             <div class="ks-navbar-actions">
-                <!-- BEGIN NAVBAR ACTION BUTTON -->
-                <div class="nav-item nav-link btn-action-block">
-                    <a class="btn btn-danger" href="#">
-                        <span class="ks-action">Activate Your Account</span>
-                        <span class="ks-description">trial ends in 1 day</span>
-                    </a>
-                </div>
-                <!-- END NAVBAR ACTION BUTTON -->
 
                 <!-- BEGIN NAVBAR LANGUAGES -->
                 <div class="nav-item dropdown ks-languages">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <a id="LangDropdown" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                       aria-haspopup="true" aria-expanded="false">
                         EN <span class="ks-text">Languages</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right ks-scrollable" aria-labelledby="Preview">
                         <div class="ks-wrapper">
-                            <a href="#" class="ks-language ks-selected">
+                            <a id="setValueUS" href="#" class="ks-language ks-selected">
                                 <span class="flag-icon flag-icon-us ks-icon"></span>
                                 <span class="ks-text">English</span>
                             </a>
-                            <a href="#" class="ks-language">
-                                <span class="flag-icon flag-icon-pl ks-icon"></span>
-                                <span class="ks-text">Polski</span>
-                            </a>
-                            <a href="#" class="ks-language">
-                                <span class="flag-icon flag-icon-de ks-icon"></span>
-                                <span class="ks-text">Deutsch</span>
-                            </a>
-                            <a href="#" class="ks-language">
-                                <span class="flag-icon flag-icon-lt ks-icon"></span>
-                                <span class="ks-text">Lietuvių</span>
-                            </a>
-                            <a href="#" class="ks-language">
+                            <a id="setValueFR" href="#" class="ks-language ">
                                 <span class="flag-icon flag-icon-fr ks-icon"></span>
                                 <span class="ks-text">Français</span>
-                            </a>
-                            <a href="#" class="ks-language">
-                                <span class="flag-icon flag-icon-by ks-icon"></span>
-                                <span class="ks-text">Беларуская</span>
-                            </a>
-                            <a href="#" class="ks-language">
-                                <span class="flag-icon flag-icon-it ks-icon"></span>
-                                <span class="ks-text">Italiano</span>
-                            </a>
-                            <a href="#" class="ks-language">
-                                <span class="flag-icon flag-icon-ua ks-icon"></span>
-                                <span class="ks-text">Українська</span>
-                            </a>
-                            <a href="#" class="ks-language">
-                                <span class="flag-icon flag-icon-es ks-icon"></span>
-                                <span class="ks-text">Español</span>
-                            </a>
-                            <a href="#" class="ks-language">
-                                <span class="flag-icon flag-icon-ru ks-icon"></span>
-                                <span class="ks-text">Русский</span>
-                            </a>
-                            <a href="#" class="ks-language">
-                                <span class="flag-icon flag-icon-cz ks-icon"></span>
-                                <span class="ks-text">Česky</span>
-                            </a>
-                            <a href="#" class="ks-language">
-                                <span class="flag-icon flag-icon-jp ks-icon"></span>
-                                <span class="ks-text">日本語</span>
-                            </a>
-                            <a href="#" class="ks-language">
-                                <span class="flag-icon flag-icon-cn ks-icon"></span>
-                                <span class="ks-text">中文</span>
-                            </a>
-                            <a href="#" class="ks-language">
-                                <span class="flag-icon flag-icon-tr ks-icon"></span>
-                                <span class="ks-text">Türkçe</span>
                             </a>
                         </div>
                     </div>
                 </div>
                 <!-- END NAVBAR LANGUAGES -->
 
-                <!-- BEGIN NAVBAR MESSAGES -->
-                <div class="nav-item dropdown ks-messages">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        <span class="la la-envelope ks-icon" aria-hidden="true">
-                            <span class="badge badge-pill badge-info">3</span>
-                        </span>
-                        <span class="ks-text">Messages</span>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="Preview">
-                        <section class="ks-tabs-actions">
-                            <a href="#"><i class="la la-plus ks-icon"></i></a>
-                            <a href="#"><i class="la la-search ks-icon"></i></a>
-                        </section>
-                        <ul class="nav nav-tabs ks-nav-tabs ks-info" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#" data-toggle="tab" data-target="#ks-navbar-messages-inbox" role="tab">Inbox</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="tab" data-target="#ks-navbar-messages-sent" role="tab">Sent</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="tab" data-target="#ks-navbar-messages-archive" role="tab">Archive</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane ks-messages-tab active" id="ks-navbar-messages-inbox" role="tabpanel">
-                                <div class="ks-wrapper ks-scrollable">
-                                    <a href="#" class="ks-message">
-                                        <div class="ks-avatar ks-online">
-                                            <img src="assets/img/avatars/avatar-1.jpg" width="36" height="36">
-                                        </div>
-                                        <div class="ks-info">
-                                            <div class="ks-user-name">Emily Carter</div>
-                                            <div class="ks-text">In golf, Danny Willett (pictured) wins the M...</div>
-                                            <div class="ks-datetime">1 minute ago</div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="ks-message">
-                                        <div class="ks-avatar ks-online">
-                                            <img src="assets/img/avatars/avatar-5.jpg" width="36" height="36">
-                                        </div>
-                                        <div class="ks-info">
-                                            <div class="ks-user-name">Emily Carter</div>
-                                            <div class="ks-text">In golf, Danny Willett (pictured) wins the M...</div>
-                                            <div class="ks-datetime">1 minute ago</div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="ks-message">
-                                        <div class="ks-avatar ks-offline">
-                                            <img src="assets/img/avatars/placeholders/ava-36.png" width="36" height="36">
-                                        </div>
-                                        <div class="ks-info">
-                                            <div class="ks-user-name">Emily Carter</div>
-                                            <div class="ks-text">In golf, Danny Willett (pictured) wins the M...</div>
-                                            <div class="ks-datetime">1 minute ago</div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="ks-message">
-                                        <div class="ks-avatar ks-offline">
-                                            <img src="assets/img/avatars/avatar-4.jpg" width="36" height="36">
-                                        </div>
-                                        <div class="ks-info">
-                                            <div class="ks-user-name">Emily Carter</div>
-                                            <div class="ks-text">In golf, Danny Willett (pictured) wins the M...</div>
-                                            <div class="ks-datetime">1 minute ago</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="ks-view-all">
-                                    <a href="#">View all</a>
-                                </div>
-                            </div>
-                            <div class="tab-pane ks-empty" id="ks-navbar-messages-sent" role="tabpanel">
-                                There are no messages.
-                            </div>
-                            <div class="tab-pane ks-empty" id="ks-navbar-messages-archive" role="tabpanel">
-                                There are no messages.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- END NAVBAR MESSAGES -->
-
                 <!-- BEGIN NAVBAR NOTIFICATIONS -->
                 <div class="nav-item dropdown ks-notifications">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                       aria-haspopup="true" aria-expanded="false">
                         <span class="la la-bell ks-icon" aria-hidden="true">
                             <span class="badge badge-pill badge-info">7</span>
                         </span>
@@ -355,25 +141,32 @@
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="Preview">
                         <ul class="nav nav-tabs ks-nav-tabs ks-info" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" href="#" data-toggle="tab" data-target="#navbar-notifications-all" role="tab">All</a>
+                                <a class="nav-link active" href="#" data-toggle="tab"
+                                   data-target="#navbar-notifications-all" role="tab">All</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="tab" data-target="#navbar-notifications-activity" role="tab">Activity</a>
+                                <a class="nav-link" href="#" data-toggle="tab"
+                                   data-target="#navbar-notifications-activity" role="tab">Activity</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="tab" data-target="#navbar-notifications-comments" role="tab">Comments</a>
+                                <a class="nav-link" href="#" data-toggle="tab"
+                                   data-target="#navbar-notifications-comments" role="tab">Comments</a>
                             </li>
                         </ul>
                         <div class="tab-content">
-                            <div class="tab-pane ks-notifications-tab active" id="navbar-notifications-all" role="tabpanel">
+                            <div class="tab-pane ks-notifications-tab active" id="navbar-notifications-all"
+                                 role="tabpanel">
                                 <div class="ks-wrapper ks-scrollable">
                                     <a href="#" class="ks-notification">
                                         <div class="ks-avatar">
                                             <img src="assets/img/avatars/avatar-3.jpg" width="36" height="36">
                                         </div>
                                         <div class="ks-info">
-                                            <div class="ks-user-name">Emily Carter <span class="ks-description">has uploaded 1 file</span></div>
-                                            <div class="ks-text"><span class="la la-file-text-o ks-icon"></span> logo vector doc</div>
+                                            <div class="ks-user-name">Mohand<span class="ks-description">has uploaded 1 file</span>
+                                            </div>
+                                            <div class="ks-text"><span class="la la-file-text-o ks-icon"></span> logo
+                                                vector doc
+                                            </div>
                                             <div class="ks-datetime">1 minute ago</div>
                                         </div>
                                     </a>
@@ -384,7 +177,7 @@
                                             </span>
                                         </div>
                                         <div class="ks-info">
-                                            <div class="ks-user-name">New project created</div>
+                                            <div class="ks-user-name">It's time for :</div>
                                             <div class="ks-text">Dashboard UI</div>
                                             <div class="ks-datetime">1 minute ago</div>
                                         </div>
@@ -397,7 +190,7 @@
                                         </div>
                                         <div class="ks-info">
                                             <div class="ks-user-name">File upload error</div>
-                                            <div class="ks-text"><span class="la la-file-text-o ks-icon"></span> logo vector doc</div>
+                                            <div class="ks-text">Task : Projet 2CPI</div>
                                             <div class="ks-datetime">10 minutes ago</div>
                                         </div>
                                     </a>
@@ -420,13 +213,14 @@
 
                 <!-- BEGIN NAVBAR USER -->
                 <div class="nav-item dropdown ks-user">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                       aria-haspopup="true" aria-expanded="false">
                         <span class="ks-avatar">
                             <img src="assets/img/avatars/avatar-13.jpg" width="36" height="36">
                         </span>
                         <span class="ks-info">
-                            <span class="ks-name">Robert Dean</span>
-                            <span class="ks-description">Premium User</span>
+                            <span class="ks-name">Yasser DRIF</span>
+                            <span class="ks-description">2CPI G6</span>
                         </span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="Preview">
@@ -477,53 +271,76 @@
 <!-- END HEADER -->
 
 
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script src="libs/jquery/jquery.min.js"></script>
+<script src="libs/responsejs/response.min.js"></script>
+<script src="libs/loading-overlay/loadingoverlay.min.js"></script>
+<script src="libs/tether/js/tether.min.js"></script>
+<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="libs/jscrollpane/jquery.jscrollpane.min.js"></script>
+<script src="libs/jscrollpane/jquery.mousewheel.js"></script>
+<script src="libs/flexibility/flexibility.js"></script>
+<script src="libs/noty/noty.min.js"></script>
+<script src="libs/velocity/velocity.min.js"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+
+<!-- BEGIN THEME LAYOUT SCRIPTS -->
+<script src="assets/scripts/common.min.js"></script>
+<!-- END THEME LAYOUT SCRIPTS -->
+
+<script src="libs/momentjs/moment-with-locales.min.js"></script>
+<script src="libs/fullcalendar/fullcalendar.min.js"></script>
+<script src="libs/flatpickr/flatpickr.min.js"></script>
+<script type="application/javascript">
+
+</script>
+<div class="ks-mobile-overlay"></div>
+
+<link href="styles/kendo.common.min.css" rel="stylesheet">
+<link href="styles/kendo.default.min.css" rel="stylesheet">
+<link href="styles/kendo.Fiori.min.css" rel="stylesheet">
+
+<script src="js/kendo.all.min.js"></script>
+<script src="js/cultures/kendo.culture.fr-FR.min.js"></script>
 
 
-<div class="box wide">
+<div class="box wide" style="display: none;">
     <label for="language">Choose language:</label>
-    <input id="language" value="en-US" />
+    <input id="language" value="en-US"/>
 </div>
 
 
 
 
-<style>
 
-</style>
-
-<!-- remove ks-page-header-fixed to unfix header -->
-
-
+<span id="popupNotification"></span>
+<button id="authorize-button" style="display: none;">Authorize</button>
+<button id="signout-button" style="display: none;">Sign Out</button>
 
 <div id="scheduler"></div>
 
-
-
-
-<script>
-    // Import DejaVu Sans font for embedding
-    // NOTE: Only required if the Kendo UI stylesheets are loaded
-    // from a different origin, e.g. cdn.kendostatic.com
-    kendo.pdf.defineFont({
-        "DejaVu Sans"             : "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans.ttf",
-        "DejaVu Sans|Bold"        : "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans-Bold.ttf",
-        "DejaVu Sans|Bold|Italic" : "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans-Oblique.ttf",
-        "DejaVu Sans|Italic"      : "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans-Oblique.ttf",
-        "WebComponentsIcons"      : "https://kendo.cdn.telerik.com/2017.1.223/styles/fonts/glyphs/WebComponentsIcons.ttf"
-    });
+<script id="event-template" type="text/x-kendo-template">
+    <div class="movie-template">
+        <p>#: title #</p>
+        <p>#: kendo.toString(start, "hh:mm") # - #: kendo.toString(end, "hh:mm") #</p>
+    </div>
 </script>
 
-<!-- Load Pako ZLIB library to enable PDF compression -->
-<script src="https://kendo.cdn.telerik.com/2018.1.117/js/pako_deflate.min.js"></script>
-<!-- Export to iCal
-<script src="https://rawgit.com/nwcell/ics.js/master/ics.js"></script>
-<button id="export">Log selected events</div>
--->
 
 <script>
-    $(function() {
+    $(function () {
 
 
+        $("#search-box").on('keyup', function (e) {
+            var text = $(e.target).val().toLowerCase();
+            var scheduler = $("#scheduler").data("kendoScheduler");
+
+            scheduler.dataSource.filter({
+                field: "title",
+                operator: "contains",
+                value: text
+            });
+        });
 
 
         function createScheduler() {
@@ -535,179 +352,471 @@
             }
 
             element.kendoScheduler({
-            toolbar: [ "pdf" ],
-            pdf: {
-                fileName: "ESIPlanner Calendar Export.pdf",
-                proxyURL: "https://demos.telerik.com/kendo-ui/service/export"
-            },
-            //selectable: true,
-            date :new Date ("2018/02/11") ,
-            height:670,
-            showWorkHours:true,
-            workDayStart: new Date("2018/1/1 8:30 AM"),
-            workDayEnd: new Date("2018/1/1 5:30 PM"),
-            workWeekStart:0,
-            workWeekEnd:4,
+                toolbar: ["pdf"],
+                pdf: {
+                    fileName: "ESIPlanner Calendar Export.pdf",
+                    proxyURL: "https://demos.telerik.com/kendo-ui/service/export"
+                },
+                //selectable: true,
+                date: new Date("2018/03/11"),
+                height: 770,
+                showWorkHours: true,
+                workDayStart: new Date("2018/1/1 8:30 AM"),
+                workDayEnd: new Date("2018/1/1 5:20 PM"),
+                workWeekStart: 0,
+                workWeekEnd: 4,
+                eventTemplate: $("#event-template").html(),
 
-            views: [
-                "day",
-                { type: "week", selected: true },
-                "workWeek",
-                "month",
-                "agenda"
-            ],
-            dataSource : [
-                {
-                    id:1,
-                    title:"POO Cour - A1 - Sadeg",
-                    start: new Date ("2018/02/11 08:30 AM"),
-                    end: new Date ("2018/02/11 10:30 AM"),
-                    roomId:1,
-                    group:3,
-                    prof:1,
+                views: [
+                    "day",
+                    {type: "week", selected: true},
+                    "workWeek",
+                    "month",
+                    "agenda"
+                ],
+                dataSource: [
+                    {
+                        id: 1,
+                        title: "POO Cour",
+                        start: new Date("2018/03/11 08:30 AM"),
+                        end: new Date("2018/03/11 10:30 AM"),
+                        roomId: 1,
+                        group: 3,
+                        prof: 1,
+                        type: 1,
+                    },
+                    {
+                        id: 2,
+                        title: "LOGM TD - S11 - Meziani",
+                        start: new Date("2018/03/11 01:00 PM"),
+                        end: new Date("2018/03/11 03:00 PM"),
+                        roomId: 17,
+                        group: 3,
+                        prof: 3,
+                        type: 1,
+
+                    },
+                    {
+                        id: 3,
+                        title: "PRST TD - S11 - Belhadi",
+                        start: new Date("2018/03/11 03:10 PM"),
+                        end: new Date("2018/03/11 05:10 PM"),
+                        roomId: 13,
+                        group: 2,
+                        prof: 3,
+                        type: 1,
+
+                    },
+                    {
+                        id: 4,
+                        title: "ANA TD - CP2 - Haddadou",
+                        start: new Date("2018/03/12 09:00 AM"),
+                        end: new Date("2018/03/12 10:30 AM"),
+                        roomId: 1,
+                        group: 3,
+                        prof: 1,
+                        type: 1,
+                    },
+                    {
+                        id: 5,
+                        title: "ANA Cour - A2 - Haddadou",
+                        start: new Date("2018/03/12 10:40 AM"),
+                        end: new Date("2018/03/12 12:10 PM"),
+                        roomId: 1,
+                        group: 3,
+                        prof: 1,
+                        type: 1,
+                    },
+                    {
+                        id: 6,
+                        title: "OPTOE TD - A1 - LAMMARI",
+                        start: new Date("2018/03/12 01:00 PM"),
+                        end: new Date("2018/03/12 02:00 PM"),
+                        roomId: 1,
+                        group: 3,
+                        prof: 1,
+                        type: 1,
+                    },
+                    {
+                        id: 7,
+                        title: "SINF TD - S06 - Saibi",
+                        start: new Date("2018/03/12 02:10 PM"),
+                        end: new Date("2018/03/12 04:10 PM"),
+                        roomId: 1,
+                        group: 3,
+                        prof: 1,
+                        type: 1,
+                    },
+                    {
+                        id: 8,
+                        title: "Projet - DPGR - Bourai,Temglit",
+                        start: new Date("2018/03/13 08:30 AM"),
+                        end: new Date("2018/03/13 12:00 PM"),
+                        roomId: 1,
+                        group: 3,
+                        prof: 1,
+                        type: 1,
+                    },
+                    {
+                        id: 9,
+                        title: "PRST Cour - A2 - Bencherif",
+                        start: new Date("2018/03/14 08:30 AM"),
+                        end: new Date("2018/03/14 10:30 AM"),
+                        roomId: 1,
+                        group: 3,
+                        prof: 1,
+                        type: 1,
+                    },
+                    {
+                        id: 10,
+                        title: "OPTOE TD - CP1 - LAMMARI",
+                        start: new Date("2018/03/14 10:40 AM"),
+                        end: new Date("2018/03/14 12:10 PM"),
+                        roomId: 1,
+                        group: 3,
+                        prof: 1,
+                        type: 1,
+                    },
+                    {
+                        id: 11,
+                        title: "SINF Cour - A1 - Bourai",
+                        start: new Date("2018/03/14 01:00 PM"),
+                        end: new Date("2018/03/14 02:00 PM"),
+                        roomId: 1,
+                        group: 3,
+                        prof: 1,
+                        type: 1,
+                    },
+                    {
+                        id: 12,
+                        title: "POO TD - CP2 - Sadeg",
+                        start: new Date("2018/03/14 02:10 PM"),
+                        end: new Date("2018/03/14 05:10 PM"),
+                        roomId: 1,
+                        group: 3,
+                        prof: 1,
+                        type: 1,
+                    },
+                    {
+                        id: 13,
+                        title: "ANA Cour - A2 - Haddadou",
+                        start: new Date("2018/03/15 08:30 AM"),
+                        end: new Date("2018/03/15 10:00 AM"),
+                        roomId: 1,
+                        group: 3,
+                        prof: 1,
+                        type: 1,
+                    },
+                    {
+                        id: 14,
+                        title: "LOGM Cour - A2 - Meziani",
+                        start: new Date("2018/03/15 10:10 AM"),
+                        end: new Date("2018/03/15 12:10 PM"),
+                        roomId: 1,
+                        group: 3,
+                        prof: 1,
+                        type: 1,
+                    },
+                    {
+                        id: 15,
+                        title: "ANA TD - S04 - Haddadou",
+                        start: new Date("2018/03/15 01:30 PM"),
+                        end: new Date("2018/03/15 03:00 PM"),
+                        roomId: 1,
+                        group: 3,
+                        prof: 1,
+                        type: 1,
+                    },
+                    {
+                        id: 16,
+                        title: "ANG TD - CP2 - Djedjig",
+                        start: new Date("2018/03/15 03:10 PM"),
+                        end: new Date("2018/03/15 05:10 PM"),
+                        roomId: 1,
+                        group: 3,
+                        prof: 1,
+                        type: 1,
+                    },
+                    {
+                        id: 37,
+                        title: "Caffé",
+                        start: new Date("2018/03/13 03:00 PM"),
+                        end: new Date("2018/03/13 03:30 PM"),
+                        type: 2,
+                    },
+                    {
+                        id: 38,
+                        title: "Footbal",
+                        start: new Date("2018/03/16 02:00 PM"),
+                        end: new Date("2018/03/16 03:30 PM"),
+                        type: 2,
+                    },
+                    {
+                        id: 39,
+                        title: "Dinner",
+                        start: new Date("2018/03/14 08:00 PM"),
+                        end: new Date("2018/03/14 08:30 PM"),
+                        type: 2,
+                    },
+
+                ],
+
+
+                resources: [
+                    {
+                        field: "type",
+                        dataSource: [
+                            {value: 1, text: "Evenement", color: "#51a0ed"},
+                            {value: 2, text: "Tache", color: "#f87484"},
+                            {value: 3, text: "Google Calendar", color: "#00b894"},
+                        ],
+                        title: "Type",
+                        name: "type"
+                    },
+                    {
+                        field: "priorite",
+                        dataSource: [
+                            {value: 1, text: "1"},
+                            {value: 2, text: "2"},
+                            {value: 3, text: "3"},
+                        ],
+                        title: "Priorite",
+                        name: "priorite"
+
+                    },
+                    {
+                        field: "group",
+                        dataSource: [
+                            {value: 1, text: "2CPI_G5"},
+                            {value: 2, text: "2CPI_G6"},
+                            {value: 3, text: "2CPI_G7"},
+                            {value: 4, text: "2CPI_G8"},
+                        ],
+                        title: "Group",
+                        name: "group"
+                    },
+                    {
+                        field: "prof",
+                        dataSource: [
+                            {value: 1, text: "Sadeg"},
+                            {value: 2, text: "Bourai"},
+                            {value: 3, text: "Meziani"},
+                            {value: 4, text: "Temglit"},
+                        ],
+                        title: "Prefesseur",
+                        name: "prof"
+
+                    },
+                    {
+                        field: "roomId",
+                        dataSource: [
+                            {value: 1, text: "A1"},
+                            {value: 2, text: "A2"},
+                            {value: 3, text: "A3"},
+                            {value: 4, text: "A4"},
+                            {value: 5, text: "AP1"},
+                            {value: 6, text: "AP2"},
+                            {value: 7, text: "AUDI"},
+                            {value: 8, text: "S1"},
+                            {value: 9, text: "S2"},
+                            {value: 10, text: "S3"},
+                            {value: 11, text: "S4"},
+                            {value: 12, text: "S5"},
+                            {value: 13, text: "S6"},
+                            {value: 14, text: "S7"},
+                            {value: 15, text: "S8"},
+                            {value: 16, text: "S9"},
+                            {value: 17, text: "S11"},
+                            {value: 18, text: "S12"},
+                            {value: 19, text: "S13"},
+                            {value: 20, text: "S14"},
+                            {value: 21, text: "S15"},
+                            {value: 22, text: "S16"},
+                            {value: 23, text: "S17"},
+                            {value: 24, text: "S18"},
+                            {value: 25, text: "S19"},
+                            {value: 26, text: "S20"},
+                            {value: 27, text: "S21"},
+                            {value: 28, text: "CP1"},
+                            {value: 29, text: "CP2"},
+                            {value: 30, text: "CP3"},
+                            {value: 31, text: "CP4"},
+                            {value: 32, text: "CP5"},
+                            {value: 33, text: "CP6"},
+                            {value: 34, text: "CP7"},
+                            {value: 35, text: "CP8"},
+                            {value: 36, text: "CP9"},
+                            {value: 37, text: "DPGR"},
+                            {value: 38, text: "M1"},
+                            {value: 39, text: "M2"},
+                            {value: 40, text: "SC"},
+                            {value: 41, text: "Cyber"},
+                            {value: 42, text: "BIBLIO"},
+                            {value: 43, text: "Salle ME"},
+                            {value: 44, text: "salle CISCO"}
+                        ],
+                        title: "Room",
+                        name: "roomId"
+
+                    },
+
+
+                ],
+
+
+                /*
+                            group : {
+                                resources: ["Salle"],
+                                orientation: "vertical",
+                            },
+                */
+
+                resize: function (e) {
+                    if (roomIsOccupied(e.start, e.end, e.event, e.resources) || groupIsOccupied(e.start, e.end, e.event, e.resources)) {
+                        this.wrapper.find(".k-marquee-color").addClass("invalid-slot");
+                        e.preventDefault();
+                    }
+                },
+
+                resizeEnd: function (e) {
+                    if (!checkAvailability(e.start, e.end, e.events)) {
+                        e.preventDefault();
+                    }
+                },
+                move: function (e) {
+                    if (roomIsOccupied(e.start, e.end, e.event, e.resources) || groupIsOccupied(e.start, e.end, e.event, e.resources) || profIsOccupied(e.start, e.end, e.event, e.resources)) {
+                        this.wrapper.find(".k-event-drag-hint").addClass("invalid-slot");
+                    }
+                },
+                moveEnd: function (e) {
+                    if (!checkAvailability(e.start, e.end, e.event, e.resources)) {
+                        e.preventDefault();
+                    }
 
                 },
-                {
-                    id:2,
-                    title:"LOGM TD - S11 - Meziani",
-                    start: new Date ("2018/02/11 01:00 PM"),
-                    end: new Date ("2018/02/11 03:00 PM"),
-                    roomId:6,
-                    group:2,
-                    prof:3,
-
+                add: function (e) {
+                    if (!checkAvailability(e.event.start, e.event.end, e.event)) {
+                        e.preventDefault();
+                    }
                 },
-                {
-                    id:3,
-                    title:"SINF TD - S6 - Saibi",
-                    start: new Date ("2018/02/12 01:00 PM"),
-                    end: new Date ("2018/02/12 03:00 PM"),
-                    roomId:6,
-                    group:2,
-                    prof:3,
-
-                }
-
-            ],
-            resources : [
-                {
-                    field : "group",
-                    dataSource : [
-                        {value :1 , text :"2CPI_G5"},
-                        {value :2 , text :"2CPI_G6"},
-                        {value :3 , text :"2CPI_G7"},
-                        {value :4 , text :"2CPI_G8"},
-                    ],
-                    title: "Groupe",
-                    name :"group"
-                },
-                {
-                    field : "prof",
-                    dataSource : [
-                        {value :1 , text :"Sadeg"},
-                        {value :2 , text :"Bourai"},
-                        {value :3 , text :"Meziani"},
-                        {value :4 , text :"Temeglit"},
-                    ],
-                    title: "Prefesseur",
-                    name :"prof"
-
-                },
-                {
-                    field : "roomId",
-                    dataSource : [
-                        {value :1 , text :"A1"},
-                        {value :2 , text :"A2"},
-                        {value :3 , text :"A3"},
-                        {value :4 , text :"A4"},
-                        {value :5 , text :"AP1"},
-
-                    ],
-                    title: "Salle",
-                    name :"Salle"
-
+                save: function (e) {
+                    if (!checkAvailability(e.event.start, e.event.end, e.event)) {
+                        e.preventDefault();
+                    }
                 },
 
+            });
 
-            ],
+
+            var scheduler = $("#scheduler").data("kendoScheduler");
+
+            $(".k-scheduler-toolbar .k-scheduler-tools").append('<li><a role="button" class="k-button Emploi">Emploi du temps</a></li>');
+            $(".k-scheduler-toolbar .k-scheduler-tools").append('<li class="box-col"> <select id="k-groupeDD"> <option value="None">Grouping: None</option> <option value="Salle">Salle</option> <option value="group">Group</option> <option value="prof">Professeur</option> </select> </li>');
+            var showOnlyType = [];
+            $(".Emploi").on("click", function () {
+                if (showOnlyType == '1') {
+                    showOnlyType = [];//pass an empty array to show all the resources
+                    $(".Emploi").text("Emploi du temps");
+                }
+                else {
+                    showOnlyType = ['1'];
+                    $(".Emploi").text("Tous le calendrier");
+                }
+                filterSchedulerResourceType(showOnlyType);
+            });
 
 
-/*
-            group : {
-                resources: ["Salle"],
-                orientation: "vertical",
-            },
-*/
+            $("#k-groupeDD").kendoDropDownList({
+                change: function () {
+                    if (this.value() === "None") {
+                        delete scheduler.options.group;
 
-            resize: function(e) {
-                if (roomIsOccupied(e.start, e.end, e.event, e.resources) || groupIsOccupied(e.start, e.end, e.event, e.resources)) {
-                    this.wrapper.find(".k-marquee-color").addClass("invalid-slot");
-                    e.preventDefault();
-                }
-            },
-            resizeEnd: function(e) {
-                if (!checkAvailability(e.start, e.end, e.events)) {
-                    e.preventDefault();
-                }
-            },
-            move: function(e) {
-                if (roomIsOccupied(e.start, e.end, e.event, e.resources) || groupIsOccupied(e.start, e.end, e.event, e.resources) || profIsOccupied(e.start, e.end, e.event, e.resources) ) {
-                    this.wrapper.find(".k-event-drag-hint").addClass("invalid-slot");
-                }
-            },
-            moveEnd: function(e) {
-                if (!checkAvailability(e.start, e.end, e.event, e.resources)) {
-                    e.preventDefault();
-                }
+                    } else {
+                        scheduler.options.group = {
+                            resources: [this.value()],
+                            orientation: "vertical",
+                        };
+                    }
+                    scheduler.view(scheduler.view().name);
 
-            },
-            add: function(e) {
-                if (!checkAvailability(e.event.start, e.event.end, e.event)) {
-                    e.preventDefault();
                 }
-            },
-            save: function(e) {
-                if (!checkAvailability(e.event.start, e.event.end, e.event)) {
-                    e.preventDefault();
-                }
-            },
+            });
+
+        }
+
+
+        $('#showAll').click(function () {
+            var showOnly = [];//pass an empty array to show all the resources
+            filterSchedulerResourceType(showOnly);
+        });
+
+        $("#btn").click(function () {
 
         });
+
+        function filterSchedulerResourceType(showOnly) {
+            var filter = {
+                logic: "or",
+                filters: $.map(showOnly, function (value) {
+                    return {
+                        operator: "eq",
+                        field: "type",
+                        value: value
+                    };
+                })
+            };
+
+            var scheduler = $("#scheduler").data("kendoScheduler");
+            //filter the resource data source
+            scheduler.dataSource.filter(filter);
+
+            scheduler.view(scheduler.view().name); //refresh the currunt view
         }
+
 
         $("#language").kendoDropDownList({
             change: changeLanguage,
             dataTextField: "text",
             dataValueField: "value",
             dataSource: [
-                {text: "en-US"},
-                {text: "fr-FR"},
+                {text: "en-US", value: "en-US"},
+                {text: "fr-FR", value: "fr-FR"},
             ]
         });
+        var dropdownlist = $("#language").data("kendoDropDownList"),
+            setValueUS = function (e) {
+                if (e.type != "keypress" || kendo.keys.ENTER == e.keyCode)
+                    dropdownlist.value("en-US");
+                $("#language").data("kendoDropDownList").trigger("change");
+                $("#setValueUS").addClass("ks-selected");
+                $("#setValueFR").removeClass("ks-selected");
+                $("#LangDropdown").text("EN");
+                kendo.culture("en-US");
+
+            };
+
+        setValueFR = function (e) {
+            if (e.type != "keypress" || kendo.keys.ENTER == e.keyCode)
+                dropdownlist.value("fr-FR");
+            $("#language").data("kendoDropDownList").trigger("change");
+            $("#setValueUS").removeClass("ks-selected");
+            $("#setValueFR").addClass("ks-selected");
+            $("#LangDropdown").text("FR");
+            kendo.culture("fr-FR");
+
+        };
+
+
+        //$("#setValue").on('click',setValueFR);
+
+        $("#setValueUS").click(setValueUS);
+        $("#setValueFR").click(setValueFR);
+
         $("#language").data("kendoDropDownList").trigger("change");
 
-        var scheduler = $("#scheduler").data("kendoScheduler");
-
-        $(".k-scheduler-toolbar .k-scheduler-tools").append('<li class="box-col"> <select id="k-groupeDD"> <option value="None">Grouping: None</option> <option value="Salle">Salle</option> <option value="group">Group</option> <option value="prof">Professeur</option> </select> </li>');
-
-        $("#k-groupeDD").kendoDropDownList({
-            change: function() {
-                if (this.value()==="None") {
-                    delete scheduler.options.group;
-
-                }else{
-                    scheduler.options.group = {
-                        resources: [this.value()],
-                        orientation: "vertical",
-                    };
-                }
-                scheduler.view(scheduler.view().name);
-
-            }
-        });
 
         var selectedEvents = [];
-        $("#export").click(function() {
+        $("#export").click(function () {
             var cal = ics();
             var event;
 
@@ -726,16 +835,15 @@
 
         $("#calendar").kendoCalendar({
             value: scheduler.date(),
-            change: function() {
+            change: function () {
                 scheduler.date(this.value());
             }
         })
 
 
-
         function changeLanguage() {
             kendo.ui.progress($("#scheduler"), true);
-            var baseUrl = 'https://kendo.cdn.telerik.com/2018.1.221/js/messages/kendo.messages.';
+            var baseUrl = 'js/Messages/kendo.messages.';
             $.getScript(baseUrl + this.value() + ".min.js", function () {
                 kendo.ui.progress($("#scheduler"), false);
                 createScheduler();
@@ -762,7 +870,7 @@
             var result = [];
             var occurrence;
 
-            for(var idx = 0, length = occurrences.length; idx < length; idx++) {
+            for (var idx = 0, length = occurrences.length; idx < length; idx++) {
                 occurrence = occurrences[idx];
                 if (occurrence[resourceFieldName] === value) {
                     result.push(occurrence);
@@ -787,7 +895,6 @@
             return false;
         }
 
-
         function roomIsOccupied(start, end, event, resources) {
             var occurrences = occurrencesInRangeByResource(start, end, "roomId", event, resources);
             if (occurrences.length > 0) {
@@ -796,27 +903,48 @@
             return false;
         }
 
+        function onShow(e) {
+            if (e.sender.getNotifications().length == 1) {
+                var element = e.element.parent(),
+                    eWidth = element.width(),
+                    eHeight = element.height(),
+                    wWidth = $(window).width(),
+                    wHeight = $(window).height(),
+                    newTop, newLeft;
+
+                newLeft = Math.floor(wWidth / 2 - eWidth / 2);
+                newTop = Math.floor(wHeight / 2 - eHeight / 2);
+
+                e.element.parent().css({top: newTop, left: newLeft});
+            }
+        }
+
+
+
         function checkAvailability(start, end, event, resources) {
 
+            var popupNotification = $("#popupNotification").kendoNotification().data("kendoNotification");
+            popupNotification.setOptions({stacking: "top"});
+
             if (groupIsOccupied(start, end, event, resources)) {
-                setTimeout(function() {
-                    alert("This group is not available in this time period.");
+                setTimeout(function () {
+                    popupNotification.show("This group is not available in this time period.", "error");
                 }, 0);
 
                 return false;
             }
 
             if (profIsOccupied(start, end, event, resources)) {
-                setTimeout(function() {
-                    alert("This Professor is not available in this time period.");
+                setTimeout(function () {
+                    popupNotification.show("This Professor is not available in this time period.", "error");
                 }, 0);
 
                 return false;
             }
 
             if (roomIsOccupied(start, end, event, resources)) {
-                setTimeout(function() {
-                    alert("This room is not available in this time period.");
+                setTimeout(function () {
+                    popupNotification.show("This room is not available in this time period.", "error");
                 }, 0);
 
                 return false;
@@ -826,29 +954,171 @@
         }
 
 
-
-
-
     });
-
-
-
-
 </script>
 
 
-<style>
-    .invalid-slot {
-        background: red !important;
-        cursor: no-drop;
+<script type="text/javascript">
+    // Client ID and API key from the Developer Console
+    var CLIENT_ID = '832389068592-j1jfv33a2m4jsmvhbaiu59mtij40oqco.apps.googleusercontent.com';
+    var API_KEY = 'AIzaSyCUQF5u6XHmYCONu2tf8cJ80gJp_-67zik';
 
+    // Array of API discovery doc URLs for APIs used by the quickstart
+    var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
+
+    // Authorization scopes required by the API; multiple scopes can be
+    // included, separated by spaces.
+    var SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
+
+    var authorizeButton = document.getElementById('authorize-button');
+    var signoutButton = document.getElementById('signout-button');
+
+    /**
+     *  On load, called to load the auth2 library and API client library.
+     */
+    function handleClientLoad() {
+        gapi.load('client:auth2', initClient);
     }
-    html
-    {
-        font: 12px sans-serif;
+
+    /**
+     *  Initializes the API client library and sets up sign-in state
+     *  listeners.
+     */
+    function initClient() {
+        gapi.client.init({
+            apiKey: API_KEY,
+            clientId: CLIENT_ID,
+            discoveryDocs: DISCOVERY_DOCS,
+            scope: SCOPES
+        }).then(function () {
+            // Listen for sign-in state changes.
+            gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+
+            // Handle the initial sign-in state.
+            updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+            authorizeButton.onclick = handleAuthClick;
+            signoutButton.onclick = handleSignoutClick;
+        });
     }
+
+    /**
+     *  Called when the signed in status changes, to update the UI
+     *  appropriately. After a sign-in, the API is called.
+     */
+    function updateSigninStatus(isSignedIn) {
+        if (isSignedIn) {
+            authorizeButton.style.display = 'none';
+            signoutButton.style.display = 'block';
+            listUpcomingEvents();
+        } else {
+            authorizeButton.style.display = 'block';
+            signoutButton.style.display = 'none';
+        }
+    }
+
+    /**
+     *  Sign in the user upon button click.
+     */
+    function handleAuthClick(event) {
+        gapi.auth2.getAuthInstance().signIn();
+    }
+
+    /**
+     *  Sign out the user upon button click.
+     */
+    function handleSignoutClick(event) {
+        gapi.auth2.getAuthInstance().signOut();
+    }
+
+    /**
+     * Append a pre element to the body containing the given message
+     * as its text node. Used to display the results of the API call.
+     *
+     * @param {string} message Text to be placed in pre element.
+     */
+
+    /**
+     * Print the summary and start datetime/date of the next ten events in
+     * the authorized user's calendar. If no events are found an
+     * appropriate message is printed.
+     */
+    function listUpcomingEvents() {
+        gapi.client.calendar.events.list({
+            'calendarId': 'primary',
+            'timeMin': (new Date()).toISOString(),
+            'showDeleted': false,
+            'singleEvents': true,
+            'maxResults': 100,
+            'orderBy': 'startTime'
+        }).then(function (response) {
+            var events = response.result.items;
+            var scheduler = $("#scheduler").data("kendoScheduler");
+
+            if (events.length > 0) {
+                for (i = 0; i < events.length; i++) {
+                    var event = events[i];
+                    var a = event.start.dateTime;
+                    if (!a) {
+                        a = event.start.date;
+                    }
+                    var b = event.end.dateTime;
+                    if (!b) {
+                        b = event.end.date;
+                    }
+                    var start = a.slice(0, 4) + "/" + a.slice(5, 7) + "/" + a.slice(8, 10) + " " + a.slice(11, 16);
+                    var end = b.slice(0, 4) + "/" + b.slice(5, 7) + "/" + b.slice(8, 10) + " " + b.slice(11, 16);
+
+                    console.log(event);
+
+                    scheduler.dataSource.add({
+                        start: new Date(start),
+                        end: new Date(end),
+                        title: event.summary,
+                        type: 3
+                    });
+
+                }
+            } else {
+                appendPre('No upcoming events found.');
+            }
+        });
+    }
+
+</script>
+
+<script async defer src="https://apis.google.com/js/api.js"
+        onload="this.onload=function(){};handleClientLoad()"
+        onreadystatechange="if (this.readyState === 'complete') this.onload()">
+</script>
+
+<style type="text/css">
+.invalid-slot {
+    background: red !important;
+    cursor: non-drop;
+}
+
+html {
+    font: 12px sans-serif;
+}
+p {
+    margin: 0.5rem;
+}
+
+.k-scheduler-tools li {
+    padding: 0 5px 0 5px;
+}
+.ks-search-form .ks-wrapper
+{
+    width: 900px;
+}
+.ks-navbar>.ks-wrapper>.nav>.ks-navbar-menu>.ks-search-form .form-control
+{
+    width: 100%;
+}
+
 
 </style>
+
 
 
 </body>
